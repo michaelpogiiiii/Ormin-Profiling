@@ -1,5 +1,5 @@
 <footer class="page-footer" id="footer">
-    <p id="copyright" class="text-center mb-5">Copyright © PUP Intern 2024</p>
+    <p id="copyright" class="text-center mb-5">Copyrightsss © PUP Intern 2024</p>
 </footer>
 
 <script>

@@ -10,7 +10,10 @@
     <div class="scrollable">
         <a href="javascript:;" class="mobile-menu-toggler"> <i data-lucide="x-circle"
                 class="w-8 h-8 text-white transform -rotate-90"></i> </a>
+               
         <ul class="scrollable__content py-2">
+        <img class="w-50" style="margin-left: 60px;" src="pydc.png" alt="alternative">
+        <h1 style="font-size: 30px;font-style: arial; color: white;margin-left: 88px;margin-bottom: 30px;font-weigth: bold">PYDC</h1>
             <li>
                 <a href="/home" class="menu menu--active">
                     <div class="menu__icon"> <i data-lucide="home"></i> </div>

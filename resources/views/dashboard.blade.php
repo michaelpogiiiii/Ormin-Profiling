@@ -140,9 +140,9 @@
 
             <!-- Image Logo -->
             <a href="index.html" class="title-h1">
-                <h1>PYDC <i class="fa fa-handshake-o" style="font-size: 30px;"></i> PYDO</h1>
+            <h1>PYDC <i class="fa fa-handshake-o" style="font-size: 30px;"></i> PYDO</h1>
             </a>
-
+  
             <button class="navbar-toggler p-0 border-0" type="button" data-toggle="offcanvas">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -201,7 +201,7 @@
                 <div class="col-lg-6" id="imgg">
                     <div class="d-flex flex-wrap">
                         <img class="w-50" src="pydc.png" alt="alternative">
-                        <img src="pydoo.png" alt="alternative" style="height: 220px" class="mt-3">
+                        <img src="pup.png" alt="alternative" style="height: 220px" class="mt-3">
                         <img class="w-50 p-3" src="ormin.png" alt="alternative"
                             style="height: 250px; margin-left:110px">
                     </div> <!-- end of image-container -->

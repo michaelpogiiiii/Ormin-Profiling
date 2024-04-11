@@ -124,6 +124,17 @@
                     });
                 @endphp
 
+                <div class="table-responsive mt-5">
+                @php
+                    use Carbon\Carbon;
+                    $currentDate = Carbon::now();
+                    $filteredProfiles = $paginator->filter(function ($data) use ($currentDate) {
+                        $birthdate = Carbon::parse($data->bday);
+                        $age = $birthdate->diffInYears($currentDate);
+                        return $age < 31;
+                    });
+                @endphp
+
                 <table class="table" id="tablePrint" style="border: 2px solid black;">
                     <tr>
                         <th>Organization Name</th>
@@ -161,6 +172,7 @@
                         @endforeach
                     @endif
                 </table>
+
                 {{ $paginator->links() }}
 
                 <div id="logos" style="display: none" class="justify-content-between">

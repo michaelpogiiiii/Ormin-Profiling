@@ -19,6 +19,12 @@
             </a>
         </li>
         <li>
+            <a href="{{ url('adminprofile') }}" class="side-menu">
+                <div class="side-menu__icon"> <i data-lucide="user"></i> </div>
+                <div class="side-menu__title"> Pending Registration </div>
+            </a>
+        </li>
+        <li>
             <a href="javascript:;" class="side-menu">
                 <div class="side-menu__icon"> <i data-lucide="edit"></i> </div>
                 <div class="side-menu__title">

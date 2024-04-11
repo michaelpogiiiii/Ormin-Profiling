@@ -68,7 +68,7 @@
             box-shadow: 0 2px 4px rgba(180, 174, 174, 0.1);
             padding: 10px;
             margin-left: 20px;
-            background-color: #f5f5f5;
+            background-color: #fff;
             font-family: Arial, sans-serif;
             width: 100%;
             height: auto;
@@ -129,6 +129,14 @@
             /* Adjust the width as needed */
             text-align: right;
         }
+        .btn{
+            background-color: #efefef;
+            border: none;
+            border-radius: 25px;
+            color: #424242;
+            box-shadow: -6px -6px 10px #f9f9f9,
+                         6px 6px 10px #00000026;
+        }
     </style>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -160,11 +168,11 @@
             <!-- END: Top Bar -->
             <div class="dashboard mt-2 container-fluid">
                 <div class="container-all">
-                    <div class="act-profile" style="position:relative;">
+                    <div class="act-profile" style="position:relative;background-color: #fff;box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.25);">
                         <div style="display: flex; justify-content:start;height:70px">
                             <p class="text-muted">All Profiles <br><span>(Active)</span></p>
                             <p
-                                style="background-color: rgb(171, 255, 222);border-radius:20px;position:absolute;top:0;right:0;">
+                                style="border-radius:10px;position:absolute;top:0;right:0;">
                                 <i class="fa fa-user p-3" style="font-size:25px;width:70px;color:rgb(10, 159, 5);"></i>
                             </p>
                         </div>
@@ -174,11 +182,11 @@
                         <button class="btn btn-success" id="actBtn">View</button>
                     </div>
 
-                    <div class="inc-profile" style="position:relative;">
+                    <div class="inc-profile" style="position:relative;background-color: #fff;box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.25);">
                         <div style="display: flex; justify-content:start; width:95%; margin:auto;height:70px">
-                            <p class="text-muted">All Profiles <br><span>(Ianctive)</span></p>
+                            <p class="text-muted">All Profiles <br><span>(Inactive)</span></p>
                             <p
-                                style="background-color: rgb(171, 255, 222);border-radius:20px;position:absolute;top:0;right:0;">
+                                style="border-radius:20px;position:absolute;top:0;right:0;">
                                 <i class="fa fa-user-times p-3"
                                     style="font-size:25px;width:70px;color:rgb(10, 159, 5);"></i>
                             </p>
@@ -189,11 +197,11 @@
                         <button class="btn btn-success" id="incBtn">View</button>
                     </div>
 
-                    <div class="up-event" style="position:relative;">
+                    <div class="up-event" style="position:relative;background-color: #fff;box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.25);">
                         <div style="display: flex; justify-content:start; width:95%; margin:auto;height:70px">
                             <p class="text-muted">All Event <br><span>(Upcoming)</span></p>
                             <p
-                                style="background-color: rgb(171, 255, 222);border-radius:20px;position:absolute;top:0;right:0;">
+                                style="border-radius:20px;position:absolute;top:0;right:0;">
                                 <i class="fa fa-calendar p-3"
                                     style="font-size:25px;width:70px;color:rgb(10, 159, 5);"></i>
                             </p>
@@ -203,11 +211,11 @@
                         <button class="btn btn-success" id="upBtn">View</button>
                     </div>
 
-                    <div class="pst-event" style="position:relative;">
+                    <div class="pst-event" style="position:relative;background-color: #fff;box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.25);">
                         <div style="display: flex; justify-content:start; width:95%; margin:auto;height:70px">
                             <p class="text-muted">All Event <br> <span>(Past)</span></p>
                             <p
-                                style="background-color: rgb(171, 255, 222);border-radius:20px;position:absolute;top:0;right:0;">
+                                style="border-radius:20px;position:absolute;top:0;right:0;">
                                 <i class="fa fa-calendar-times-o p-3"
                                     style="font-size:25px;width:70px;color:rgb(10, 159, 5);"></i>
                             </p>
@@ -217,11 +225,11 @@
                         <button class="btn btn-success" id="pastBtn">View</button>
                     </div>
 
-                    <div class="pst-event" style="position:relative;">
+                    <div class="pst-event" style="position:relative;background-color: #fff;box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.25);">
                         <div style="display: flex; justify-content:start; width:95%; margin:auto;height:70px">
                             <p class="text-muted">Accomplishment <br> <span>Report</span></p>
                             <p
-                                style="background-color: rgb(171, 255, 222);border-radius:20px;position:absolute;top:0;right:0;">
+                                style=";border-radius:20px;position:absolute;top:0;right:0;">
                                 <i class="fa fa-file-text-o p-3"
                                     style="font-size:25px;width:70px;color:rgb(10, 159, 5);"></i>
                             </p>
@@ -231,11 +239,11 @@
                         <button class="btn btn-success" id="accBtn">View</button>
                     </div>
 
-                    <div class="pst-event" style="position:relative;">
+                    <div class="pst-event" style="position:relative;background-color: #fff;box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.25);">
                         <div style="display: flex; justify-content:start; width:95%; margin:auto;height:70px;">
                             <p class="text-muted">Monitoring <br> <span>Report</span></p>
                             <p
-                                style="background-color: rgb(171, 255, 222);border-radius:20px;position:absolute;top:0;right:0;">
+                                style="border-radius:20px;position:absolute;top:0;right:0;">
                                 <i class="fa fa-file-text-o p-3"
                                     style="font-size:25px;width:70px;color:rgb(10, 159, 5);"></i>
                             </p>

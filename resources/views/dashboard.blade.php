@@ -220,8 +220,8 @@
     <div class="p-4" id="header">
         <div class="container p-3">
             <div class=" text-center">
-                <h3 style="font-family: 'Permanent Marker', cursive;">Youth Profiling</h3>
-                <h1 style="font-family: 'Permanent Marker', cursive;font-size:70px;" class="mb-5">Participate Now!
+                <h3 style="font-family: 'Roboto', cursive;">Youth Profiling</h3>
+                <h1 style="font-family: 'Permanent Marker', cursive;font-size:70px;" class="mb-5">PARTICIPATE NOW!
                 </h1>
 
             </div> <!-- end of text-container -->
@@ -229,7 +229,7 @@
         </div>
         <div class="d-flex justify-content-center p-3">
             <a class="btn btn-success p-3" href="{{ route('register') }}"
-                style="font-size:20px;border-radius:20px;font-weight:300;text-decoration:none;">Create an Account</a>
+                style="font-size:20px;border-radius:20px;font-weight:300;text-decoration:none;"> Create an Account</a>
         </div>
     </div> <!-- end of basic-1 -->
 

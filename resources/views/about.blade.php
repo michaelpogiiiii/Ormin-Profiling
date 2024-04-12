@@ -1,4 +1,4 @@
-<div class="container mt-3" style="font-family: 'Playfair', serif;" id="bout">
+<div class="container mt-3" style="font-family: 'DM-Sans', sans-serif;" id="bout">
     <div class="page-section pb-0" id="about">
         <div class="container">
             <div class="row align-items-center">

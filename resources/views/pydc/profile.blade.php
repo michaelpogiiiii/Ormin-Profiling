@@ -12,7 +12,7 @@
     <meta name="keywords"
         content="admin template, Tinker Admin Template, dashboard template, flat admin template, responsive admin template, web app">
     <meta name="author" content="LEFT4CODE">
-    <title>Admin</title>
+    <title>Registered Profiles</title>
     <!-- BEGIN: CSS Assets-->
     <!-- CSS -->
     <!-- CSS -->
@@ -30,25 +30,57 @@
     <!-- END: CSS Assets-->
     <style>
         table {
+            font-family: sans-serif;
+            font-weight: 100;
             border-collapse: collapse;
             width: 100%;
+           
+            overflow: hidden;
+            box-shadow: -6px -6px 10px #f9f9f9,
+                         6px 6px 10px #00000026;
         }
 
         th,
         td {
-            border: 1px solid black;
-            text-align: left;
-            padding: 8px;
-            text-align: center;
+         background-color: white;
+         padding: 15px;
+         color: black;
+         text-align: center;
+         border-color: gray;
         }
 
         th {
-            background-color: #4CAF50;
-            color: black;
+         text-align: left;
+        }
+        thead th{
+            background-color: green;
+            color: white;
+        }
+        tbody tr:hover {
+            background-color: #ffffff4d;
+        }
+        tbody td {
+            position: relative;
+        }
+        tbody td:hover:before {
+            content: "";
+            position: absolute;
+            background-color: #ffffff33;
+            left: 0;
+            right: 0;
+            top: -9999px;
+            bottom: -9999px;
+            z-index: -1;
         }
 
-        tr:nth-child(even) {
-            background-color: #f2f2f2;
+
+        .btn{
+            background-color: #efefef;
+            border: none;
+            border-radius: 25px;
+            color: #424242;
+            box-shadow: -6px -6px 10px #f9f9f9,
+                         6px 6px 10px #00000026;
         }
     </style>
 </head>
@@ -124,7 +156,9 @@
                     });
                 @endphp
 
-                <table class="table" id="tablePrint" style="border: 2px solid black;">
+            <table class="table" id="tablePrint" style= "border: 2px grey solid">
+                <tbody>
+                <thead>
                     <tr>
                         <th>Full Name</th>
                         <th>Age</th>
@@ -134,6 +168,7 @@
                         <th>Barangay</th>
                         <th class="action-column">Action</th>
                     </tr>
+                </thead>
                     @if ($filteredProfiles->isEmpty())
                         <tr>
                             <td colspan="7">No data available</td>
@@ -160,7 +195,8 @@
                             </tr>
                         @endforeach
                     @endif
-                </table>
+                <tbody>
+             </table>
                 {{ $paginator->links() }}
 
                 <div id="logos" style="display: none" class="justify-content-between">

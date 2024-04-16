@@ -1,3 +1,4 @@
+<div style="background-image: url('aboutbg.png'); background-size: cover; background-position: center; background-repeat: no-repeat; height: 500px;">
 <div class="container mt-3" style="font-family: 'DM-Sans', sans-serif;" id="bout">
     <div class="page-section pb-0" id="about">
         <div class="container">
@@ -53,6 +54,7 @@
             </div>
         </div>
     </div>
+</div>
 </div>
 
 <script>

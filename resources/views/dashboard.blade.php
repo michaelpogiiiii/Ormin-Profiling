@@ -237,19 +237,13 @@
                 <h3 style="font-family: 'DM-Sans', font-size: '40px', cursive;">Youth Profiling</h3>
                 <h1 style="font-family: 'Permanent Marker', cursive;font-size:70px;" class="mb-5">PARTICIPATE NOW!
                 </h1>
-
             </div> <!-- end of text-container -->
-
         </div>
         <div class="d-flex justify-content-center p-3">
             <a class="btn btn-success p-3" href="{{ route('register') }}"
                 style="font-size:20px;border-radius:20px;font-weight:300;text-decoration:none;"> Create an Account</a>
         </div>
     </div> <!-- end of basic-1 -->
-
-
-
-
 
     <!-- Copyright -->
     <div class="copyright " id="contact">

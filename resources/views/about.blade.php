@@ -1,5 +1,5 @@
-<div style="background-image: url('aboutbg.png'); background-size: cover; background-position: center; background-repeat: no-repeat; height: 500px;">
-<div class="container mt-3" style="font-family: 'DM-Sans', sans-serif;" id="bout">
+<div style="margin: 0 auto; background-image: url('aboutbg6.png'); background-size: cover; background-position: center; background-repeat: no-repeat; height: 850px; margin-top: -15.5px;">
+<div class="container mt-3" style="font-family: 'DM-Sans', sans-serif; margin-left: 1000px; padding-top: 175px; color: white;" id="bout">
     <div class="page-section pb-0" id="about">
         <div class="container">
             <div class="row align-items-center">
@@ -8,7 +8,7 @@
                         <h2 class="section-heading mb-3" id="d-text">PYDC Youth Profiling</h2>
                         <h5 class="accordion-title" id="d-text">FAQs</h5>
                         <div class="acc-container">
-                            <div class="question">Why does the Provincial Youth Development Council collect data on
+                            <div class="question"> Why does the Provincial Youth Development Council collect data on
                                 youths?</div>
                             <div class="answer text-muted">
                                 The PYDC collects data on youths to gain a comprehensive understanding of their needs,
@@ -43,12 +43,11 @@
                                 to address their specific needs and
                                 contribute to their overall development.
                             </div>
+                            </div>
+                            </div>
+                            </div>
+                         </div>
                         </div>
-                    </div>
-                </div>
-                <div class="col-lg-6 wow fadeInRight" data-wow-delay="400ms">
-                    <div class="img-place custom-img-1 animate__pulse animate__animated infinite animate__slow">
-                        <img src="youthjj.jpg" alt="youth" class="img-fluid">
                     </div>
                 </div>
             </div>
@@ -56,6 +55,7 @@
     </div>
 </div>
 </div>
+
 
 <script>
     //About

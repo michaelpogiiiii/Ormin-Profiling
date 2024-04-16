@@ -89,6 +89,7 @@
         }
 
         .answer {
+            
             padding-top: 25px;
             font-size: 18px;
             line-height: 1.5;
@@ -106,7 +107,7 @@
         .acc-container.active .question {
             font-size: 20px;
             transition: .5s;
-            color: green;
+            color: #98fb98;
             font-weight: bolder;
         }
 
@@ -130,19 +131,19 @@
             }
         }
         .btn{
+            margin-top: 30px;
             background-color: #efefef;
             border: none;
             border-radius: 25px;
             color: #424242;
-            box-shadow: -6px -6px 10px #f9f9f9,
-                         6px 6px 10px #00000026;
+           
         }
     </style>
 </head>
 
 <body data-spy="scroll" data-target=".fixed-top">
 
-<div style="background-image: url('bg1.png'); background-size: cover; background-position: center; background-repeat: no-repeat; height: 900px;">
+<div style="background-image: url('bg2.png'); background-size: cover; background-position: center; background-repeat: no-repeat; height: 800px;">
    
 <!-- Navigation -->
     <nav class="navbar navbar-expand-lg fixed-top navbar-dark">
@@ -213,10 +214,10 @@
                 </div> <!-- end of col -->
                 <div class="col-lg-6" id="imgg">
                     <div class="d-flex flex-wrap">
-                        <img class="w-40" src="pydcnew.png" alt="alternative"  style="height: 250px">
-                        <img src="pup.png" alt="alternative" style="height: 210px" class="mt-3">
+                        <img class="w-40" src="pydcnew.png" alt="alternative"  style="height: 250px; margin-top: 25px; margin-left:12px">
+                        <img src="goyddbgfinal2.png" alt="alternative" style="height: 255px; margin-left:20px"  class="mt-3">
                         <img class="w-45" src="orminnew.png" alt="alternative"
-                            style="height: 250px; margin-left:110px">
+                            style="height: 265px; margin-left:135px">
                         </div>
                     </div> <!-- end of image-container -->
                 </div> <!-- end of div -->
@@ -229,21 +230,13 @@
     {{-- About --}}
     @include('about')
 
-
-    <!-- Description -->
-    <div class="p-4" id="header">
-        <div class="container p-3">
-            <div class=" text-center">
-                <h3 style="font-family: 'DM-Sans', font-size: '40px', cursive;">Youth Profiling</h3>
-                <h1 style="font-family: 'Permanent Marker', cursive;font-size:70px;" class="mb-5">PARTICIPATE NOW!
-                </h1>
-            </div> <!-- end of text-container -->
-        </div>
-        <div class="d-flex justify-content-center p-3">
-            <a class="btn btn-success p-3" href="{{ route('register') }}"
-                style="font-size:20px;border-radius:20px;font-weight:300;text-decoration:none;"> Create an Account</a>
-        </div>
-    </div> <!-- end of basic-1 -->
+    <div style="background-image: url('contactbg2.png'); background-size: cover; background-position: center; background-repeat: no-repeat; height: 150px;">
+    <div class="d-flex justify-content-center p-3">
+                             <a class="btn btn-success p-3" href="{{ route('register') }}"
+                             style="font-size:20px;border-radius:20px;font-weight:300;text-decoration:none;" > Create an Account</a>
+    </div>
+    </div>
+         <!-- end of basic-1 -->
 
     <!-- Copyright -->
     <div class="copyright " id="contact">

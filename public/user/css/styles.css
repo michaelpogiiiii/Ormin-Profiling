@@ -55,7 +55,7 @@ h1 {
 }
 
 h2 {
-	color: #333333;
+	color: #baffba;
 	font: 600 2rem/2.75rem "Poppins", sans-serif;
 }
 
@@ -70,7 +70,7 @@ h4 {
 }
 
 h5 {
-	color: #333333;
+	color: #baffba;
 	font: 600 1.25rem/1.75rem "Poppins", sans-serif;
 }
 
@@ -1252,13 +1252,13 @@ input[type='checkbox'] {
 .copyright {
 	padding-bottom: 1rem;
 	text-align: center;
-	background-color: #25252f;
+	background-color: #052005;
 }
 
 .copyright p,
 .copyright a {
-	color: #8d8c96;
-	text-decoration: none;
+	color: white;
+	text-decoration: black;
 }
 
 

@@ -13,10 +13,23 @@
 
         <!-- Scripts -->
         @vite(['resources/css/app.css', 'resources/js/app.js'])
+
+        <style>
+            .background-image {
+                background-image: url('loginbg2.png');
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-attachment: fixed;
+            }
+        </style>
     </head>
-    <body>
+
+    <body class="background-image">
+       
         <div class="font-sans text-gray-900 antialiased">
-            {{ $slot }}
+       {{ $slot }}  
         </div>
+        
     </body>
 </html>

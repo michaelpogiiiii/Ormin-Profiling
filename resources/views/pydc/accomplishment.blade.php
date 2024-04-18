@@ -190,6 +190,15 @@
         .fa-download:hover {
             color: green;
         }
+        
+        .btn{
+            background-color: #efefef;
+            border: none;
+            border-radius: 25px;
+            color: #424242;
+            box-shadow: -6px -6px 10px #f9f9f9,
+                         6px 6px 10px #00000026;
+        }
     </style>
 </head>
 <!-- END: Head -->

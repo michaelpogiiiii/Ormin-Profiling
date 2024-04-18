@@ -75,14 +75,14 @@
 
         .question {
             padding: 18px 0;
-            font-size: 20px;
+            font-size: 15px;
             cursor: pointer;
             border-bottom: 1px solid black;
             position: relative;
         }
 
         .question::after {
-            font-size: 20px;
+            font-size: 15px;
             content: '+';
             position: absolute;
             right: 5px;
@@ -90,8 +90,8 @@
 
         .answer {
             
-            padding-top: 25px;
-            font-size: 18px;
+            padding-top: -15px;
+            font-size: 13px;
             line-height: 1.5;
             height: 0;
             overflow: hidden;
@@ -102,10 +102,11 @@
         /* Active Link */
         .acc-container.active .answer {
             height: 220px;
+            margin-bottom: -123px;
         }
 
         .acc-container.active .question {
-            font-size: 20px;
+            font-size: 15px;
             transition: .5s;
             color: #98fb98;
             font-weight: bolder;
@@ -143,7 +144,7 @@
 
 <body data-spy="scroll" data-target=".fixed-top">
 
-<div style="background-image: url('bg2.png'); background-size: cover; background-position: center; background-repeat: no-repeat; height: 800px;">
+<div style="background-image: url('bg2.png'); background-size: cover; background-position: center; background-repeat: no-repeat; height: 700px;">
    
 <!-- Navigation -->
     <nav class="navbar navbar-expand-lg fixed-top navbar-dark">
@@ -214,10 +215,10 @@
                 </div> <!-- end of col -->
                 <div class="col-lg-6" id="imgg">
                     <div class="d-flex flex-wrap">
-                        <img class="w-40" src="pydcnew.png" alt="alternative"  style="height: 250px; margin-top: 25px; margin-left:12px">
-                        <img src="goyddbgfinal2.png" alt="alternative" style="height: 255px; margin-left:20px"  class="mt-3">
+                        <img class="w-40" src="pydcnew.png" alt="alternative"  style="height: 210px; margin-top: 25px; margin-left:30px">
+                        <img src="goyddbgfinal2.png" alt="alternative" style="height: 210px; margin-left:38px"  class="mt-3">
                         <img class="w-45" src="orminnew.png" alt="alternative"
-                            style="height: 265px; margin-left:135px">
+                            style="height: 210px; margin-left:153px">
                         </div>
                     </div> <!-- end of image-container -->
                 </div> <!-- end of div -->

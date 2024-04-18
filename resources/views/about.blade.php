@@ -1,5 +1,5 @@
-<div style="margin: 0 auto; background-image: url('aboutbg6.png'); background-size: cover; background-position: center; background-repeat: no-repeat; height: 850px; margin-top: -15.5px;">
-<div class="container mt-3" style="font-family: 'DM-Sans', sans-serif; margin-left: 1000px; padding-top: 175px; color: white;" id="bout">
+<div style="margin: 0 auto; background-image: url('aboutbg8.png'); background-size: cover; background-position: center; background-repeat: no-repeat; height: 625px; margin-top: -17.5px;">
+<div class="container mt-3" style="font-family: 'DM-Sans', sans-serif; margin-left: 700px; padding-top: 100px; color: white;" id="bout">
     <div class="page-section pb-0" id="about">
         <div class="container">
             <div class="row align-items-center">

@@ -134,7 +134,7 @@
                         return $age < 31;
                     });
                 @endphp
-
+                
                 <table class="table" id="tablePrint" style="border: 2px solid black;">
                     <tr>
                         <th>Organization Name</th>
@@ -172,7 +172,7 @@
                         @endforeach
                     @endif
                 </table>
-
+                
                 {{ $paginator->links() }}
 
                 <div id="logos" style="display: none" class="justify-content-between">

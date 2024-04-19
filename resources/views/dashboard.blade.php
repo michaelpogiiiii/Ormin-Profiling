@@ -245,7 +245,7 @@
                     <p><a href="https://www.facebook.com/pydoormin" target="_blank"><i class="fab fa-facebook"
                                 style="font-size:20px; "></i></a> www.facebook.com/pydoormin</p>
 
-                    <p class="p-small">© PUP Bansud Intern <span id="year"></span></p>
+                    <p class="p-small" > <em> © PUP Bansud Intern </em> <span id="year"></span></p>
                 </div> <!-- end of col -->
             </div> <!-- enf of row -->
         </div> <!-- end of container -->

@@ -200,9 +200,9 @@
             <div class="row">
                 <div class="col-lg-6">
                     <div class="text-container">
-                        <h1 class="h1-large">PYDC <span id="js-rotating">innovative, inspiring, engaged</span></h1>
+                        <h1 class="h1-large"> GO-YDD <span id="js-rotating">innovative, inspiring, engaged</span></h1>
                         <p class="p-large text-justify">
-                            The Provincial Youth Development Council of Oriental Mindoro is a local government-led
+                            The Office of the Governor - Youth Development Division (GO-YDD) is a local government-led
                             initiative aimed at promoting the overall development of young people in a specific province
                             or region.
                             It serves as a platform for engaging and empowering youth in various activities, programs,
@@ -215,9 +215,9 @@
                 </div> <!-- end of col -->
                 <div class="col-lg-6" id="imgg">
                     <div class="d-flex flex-wrap">
-                        <img class="w-40" src="pydcnew.png" alt="alternative"  style="height: 210px; margin-top: 25px; margin-left:30px">
+                        <img class="w-40" src="orminnew.png" alt="alternative"  style="height: 210px; margin-top: 25px; margin-left:30px">
                         <img src="goyddbgfinal2.png" alt="alternative" style="height: 210px; margin-left:38px"  class="mt-3">
-                        <img class="w-45" src="orminnew.png" alt="alternative"
+                        <img class="w-45" src="pydcnew.png" alt="alternative"
                             style="height: 210px; margin-left:153px">
                         </div>
                     </div> <!-- end of image-container -->
@@ -231,12 +231,6 @@
     {{-- About --}}
     @include('about')
 
-    <div style="background-image: url('contactbg2.png'); background-size: cover; background-position: center; background-repeat: no-repeat; height: 150px;">
-    <div class="d-flex justify-content-center p-3">
-                             <a class="btn btn-success p-3" href="{{ route('register') }}"
-                             style="font-size:20px;border-radius:20px;font-weight:300;text-decoration:none;" > Create an Account</a>
-    </div>
-    </div>
          <!-- end of basic-1 -->
 
     <!-- Copyright -->
@@ -246,6 +240,8 @@
                 <div class="col-lg-12 p-5">
                     <p><i class="fa fa-envelope" style="font-size:20px;"></i> pydcormin@yahoo.com</p>
                     <p><i class="fa fa-envelope" style="font-size:20px;"></i> pgormpydc@gmail.com</p>
+                    <p><a href="https://www.youtube.com/@orientalmindoropydc2757" target="_blank"><i class="fab fa-youtube"
+                                style="font-size:20px; "></i></a> www.youtube.com/@orientalmindoropydc2757</p>
                     <p><a href="https://www.facebook.com/pydoormin" target="_blank"><i class="fab fa-facebook"
                                 style="font-size:20px; "></i></a> www.facebook.com/pydoormin</p>
 

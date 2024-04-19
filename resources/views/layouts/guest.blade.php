@@ -16,7 +16,7 @@
 
         <style>
             .background-image {
-                background-image: url('loginbg2.png');
+                background-image: url('loginbg5.png');
                 background-size: cover;
                 background-position: center;
                 background-repeat: no-repeat;

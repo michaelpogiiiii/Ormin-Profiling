@@ -5,13 +5,13 @@
             <div class="row align-items-center">
                 <div class="col-lg-6 py-3 wow fadeInUp">
                     <div class="text-block">
-                        <h2 class="section-heading mb-3" id="d-text">PYDC Youth Profiling</h2>
+                        <h2 class="section-heading mb-3" id="d-text"> GO-YDD Youth Profiling</h2>
                         <h5 class="accordion-title" id="d-text">FAQs</h5>
                         <div class="acc-container">
-                            <div class="question"> Why does the Provincial Youth Development Council collect data on
+                            <div class="question"> Why does the Office of the Governor - Youth Development Division (GO-YDD) collect data on
                                 youths?</div>
                             <div class="answer text-muted">
-                                The PYDC collects data on youths to gain a comprehensive understanding of their needs,
+                                The GO-YDD collects data on youths to gain a comprehensive understanding of their needs,
                                 challenges, and aspirations.
                                 This information serves as a valuable resource for developing youth-oriented policies,
                                 programs, and initiatives.
@@ -21,8 +21,7 @@
                             </div>
                         </div>
                         <div class="acc-container">
-                            <div class="question">What is the rationale behind the establishment of the Provincial Youth
-                                Development Council?</div>
+                            <div class="question">What is the rationale behind the establishment of the Office of the Governor - Youth Development Division (GO-YDD)?</div>
                             <div class="answer text-muted">Republic Act (RA) 10742, otherwise known as the "Sangguniang
                                 Kabataan (SK) Reform Act 2015",
                                 encourages the involvement of the youth in public and civic affairs through the
@@ -31,10 +30,9 @@
                             </div>
                         </div>
                         <div class="acc-container">
-                            <div class="question">How does the Republic Act support the objectives of the Provincial
-                                Youth Development Council?</div>
+                            <div class="question">How does the Republic Act support the objectives of the Office of the Governor - Youth Development Division (GO-YDD)?</div>
                             <div class="answer text-muted">The Republic Act (RA) 10742, provides the legal framework and
-                                mandate for the PYDC's
+                                mandate for the GO-YDD's
                                 existence and operations. It outlines the council's objectives, functions, composition,
                                 and responsibilities.
                                 The Act emphasizes the promotion of youth welfare, empowerment, and active participation

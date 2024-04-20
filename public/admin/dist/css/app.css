@@ -9950,7 +9950,7 @@ body.tabulator-print-fullscreen-hide > *:not(.tabulator-print-fullscreen) {
  */
 html{
     --tw-bg-opacity: 1;
-    background-color: rgb(var(--color-primary) / var(--tw-bg-opacity));
+    background-color: rgb(10, 155, 10);
 }
 html.dark{
     --tw-bg-opacity: 1;
@@ -12293,6 +12293,7 @@ html body{
     padding-left: 1.25rem;
     --tw-text-opacity: 1;
     color: rgb(255 255 255 / var(--tw-text-opacity));
+    font-weight: 400;
 }
 .dark .side-nav .side-menu{
     --tw-text-opacity: 1;

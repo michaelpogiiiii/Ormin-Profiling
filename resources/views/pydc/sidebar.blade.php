@@ -14,19 +14,19 @@
         </li>
         <li>
             <a href="{{ url('adminprofile') }}" class="side-menu">
-                <div class="side-menu__icon"> <i data-lucide="user"></i> </div>
+                <div class="side-menu__icon"> <i data-lucide="file-text"></i> </div>
                 <div class="side-menu__title"> Registered Profiles </div>
             </a>
         </li>
         <li>
             <a href="{{ url('adminprofile') }}" class="side-menu">
-                <div class="side-menu__icon"> <i data-lucide="user"></i> </div>
+                <div class="side-menu__icon"> <i data-lucide="user-minus"></i> </div>
                 <div class="side-menu__title"> Pending Registration </div>
             </a>
         </li>
         <li>
             <a href="javascript:;" class="side-menu">
-                <div class="side-menu__icon"> <i data-lucide="edit"></i> </div>
+                <div class="side-menu__icon"> <i data-lucide="calendar"></i> </div>
                 <div class="side-menu__title">
                     Events
                     <div class="side-menu__sub-icon "> <i data-lucide="chevron-down"></i> </div>
@@ -73,7 +73,7 @@
         </li>
         <li>
             <a href="{{ url('municipality-users') }}" class="side-menu">
-                <div class="side-menu__icon"> <i data-lucide="user"></i> </div>
+                <div class="side-menu__icon"> <i data-lucide="users"></i> </div>
                 <div class="side-menu__title"> Users </div>
             </a>
         </li>

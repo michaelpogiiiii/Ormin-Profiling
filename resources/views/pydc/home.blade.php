@@ -76,19 +76,23 @@
 
 
         .container-all>div {
-            border-radius: 10px;
+            border-radius: 0.375rem;
             box-sizing: border-box;
-            border: 1px solid #d8d3d3;
-            box-shadow: 0 2px 4px rgba(127, 125, 125, 0.1);
+            border-color: transparent;
+            --tw-bg-opacity: 1;
+            box-shadow: 0px 3px 20px #0000000b;
+            position: relative;
             padding: 20px;
             margin-bottom: 10px;
-            background-color: #f5f5f5;
+            background-color: rgb(255 255 255 / var(--tw-bg-opacity));
             text-align: center;
             font-family: Arial, sans-serif;
             width: 240px;
             height: 220px;
-        }
 
+     
+        }
+     
         .container-all div p {
             margin: 0;
             font-size: 18px;
@@ -167,7 +171,8 @@
             </div>
             <!-- END: Top Bar -->
             <div class="dashboard mt-2 container-fluid">
-                <div class="container-all">
+              
+                <div class="container-all ">
                     <div class="act-profile" style="position:relative;background-color: #fff;box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.25);">
                         <div style="display: flex; justify-content:start;height:70px">
                             <p class="text-muted">All Profiles <br><span>(Active)</span></p>
@@ -253,6 +258,7 @@
                         <button class="btn btn-success" id="monBtn">View</button>
                     </div>
                 </div>
+         
 
                 <div class="container-ind">
                     <div class="container-profile">

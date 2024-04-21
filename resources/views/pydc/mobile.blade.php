@@ -12,7 +12,7 @@
                 class="w-8 h-8 text-white transform -rotate-90"></i> </a>
                
         <ul class="scrollable__content py-2">
-        <img class="w-50" style="margin-left: 60px;" src="pydc.png" alt="alternative">
+        <img class="w-51" style="margin-left: 70px" src="goyddbgfinalogo.png" alt="alternative">
         <h1 style="font-size: 30px;font-style: arial; color: white;margin-left: 88px;margin-bottom: 30px;font-weigth: bold">PYDC</h1>
             <li>
                 <a href="/home" class="menu menu--active">
@@ -74,16 +74,12 @@
             </li>
         </ul>
 
-
-        <>
             <!-- Account Management -->
-            <div class="block px-4 py-2 text-xs text-gray-400">
+            <div class="block px-4 py-2 text-xs text-gray-400; ">
                 {{ __('Manage Account') }}
             </div>
+            
 
-            {{-- <x-dropdown-link href="{{ route('profile.show') }}">
-            {{ __('Profile') }}
-        </x-dropdown-link> --}}
 
             @if (Laravel\Jetstream\Jetstream::hasApiFeatures())
                 <x-dropdown-link href="{{ route('api-tokens.index') }}">
@@ -91,9 +87,14 @@
                 </x-dropdown-link>
             @endif
 
-            <div class="border-t border-gray-200"></div>
+            <div class="border-t border-gray-200" ></div>
 
             <!-- Authentication -->
+
+                      
+        <a class="block w-full px-4 py-2 text-left text-sm leading-5 text-gray-700 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 transition duration-150 ease-in-out" 
+        href="https://pydcprofiling.online/user/profile"> Profile </a>
+      
             <form method="POST" action="{{ route('logout') }}" x-data>
                 @csrf
 

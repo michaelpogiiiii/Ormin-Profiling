@@ -45,7 +45,7 @@
         }
 
         th {
-            background-color: #4CAF50;
+            background-color: green;
             color: white;
         }
 

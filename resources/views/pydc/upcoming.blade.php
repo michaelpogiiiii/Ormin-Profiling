@@ -115,6 +115,7 @@
                         <li class="breadcrumb-item active" aria-current="page">Dashboard</li>
                     </ol>
                 </nav>
+                <x-app-layout></x-app-layout>
                 <!-- END: Breadcrumb -->
             </div>
             <!-- END: Top Bar -->

@@ -39,7 +39,9 @@ use App\Http\Controllers\RoxasAdminController;
 use App\Http\Controllers\TeodoroAdminController;
 use App\Http\Controllers\SocorroAdminController;
 use App\Http\Controllers\VictoriaAdminController;
-
+use App\Http\Controllers\pendingregistration;
+use App\Http\Controllers\approved;
+use App\Http\Controllers\ExpiredController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -69,6 +71,11 @@ Route::middleware([
 //Super Admin
 Route::group(['middleware' => 'superadmin'], function () {
     Route::get('/adminprofile', [AdminController::class, 'adminProfile']);
+    Route::get('/pending-registration', [pendingregistration::class, 'pendingRegistration']);
+    Route::get('/disapproved', [pendingregistration ::class, 'disApproved']);
+    Route::get('/waitlist', [pendingregistration ::class, 'waitList']);
+    Route::get('/approved', [approved ::class, 'Approved']);
+    Route::get('/expired', [ExpiredController ::class, 'Expired']);
     Route::get('/municipality-users', [AdminController::class, 'municipalityUser']);
     Route::post('/user-profile', [AdminController::class, 'userProfile']);
     Route::get('/search-user', [AdminController::class, 'searchUser']);
@@ -89,6 +96,9 @@ Route::group(['middleware' => 'superadmin'], function () {
 // Route::get('/view-user/{id}', [AdminController::class, 'viewUser']);
 
 
+
+$disapproved = ['reason' => 'Not Valid'];
+$var = compact('disapproved');
 
 //Users
 

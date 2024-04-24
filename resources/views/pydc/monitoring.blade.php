@@ -221,6 +221,7 @@
                         <li class="breadcrumb-item active" aria-current="page">Monitoring Report</li>
                     </ol>
                 </nav>
+                <x-app-layout></x-app-layout>
                 <!-- END: Breadcrumb -->
             </div>
             <!-- END: Top Bar -->

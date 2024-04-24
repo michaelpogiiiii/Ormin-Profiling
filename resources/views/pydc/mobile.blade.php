@@ -13,7 +13,7 @@
                
         <ul class="scrollable__content py-2">
         <img class="w-51" style="margin-left: 70px" src="goyddbgfinalogo.png" alt="alternative">
-        <h1 style="font-size: 30px;font-style: arial; color: white;margin-left: 88px;margin-bottom: 30px;font-weigth: bold">PYDC</h1>
+        <h1 style="font-size: 30px;font-style: DM-sans; color: white;margin-left: 70px;margin-bottom: 30px;font-weigth: bolder">GO_YDD</h1>
             <li>
                 <a href="/home" class="menu menu--active">
                     <div class="menu__icon"> <i data-lucide="home"></i> </div>

@@ -221,6 +221,7 @@
                         <li class="breadcrumb-item active" aria-current="page">Accomplishment Report</li>
                     </ol>
                 </nav>
+                <x-app-layout></x-app-layout>
                 <!-- END: Breadcrumb -->
             </div>
             <!-- END: Top Bar -->

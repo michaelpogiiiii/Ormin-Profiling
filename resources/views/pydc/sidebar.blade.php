@@ -2,7 +2,10 @@
 <nav class="side-nav">
 
     <ul>
-        <x-app-layout></x-app-layout>
+    <img class="w-52" style="margin-left: 70px" src="goyddbgfinalogo.png" alt="alternative">
+        <h1 style="font-size: 30px;font-family: sans-serif; color: white;margin-left: 60px;margin-bottom: 30px; margin-top: 15px;font-weigth: bolder">GO-YDD</h1>
+        
+      
         <li>
             <a href="/home" class="side-menu side-menu">
                 <div class="side-menu__icon"> <i data-lucide="home"></i> </div>
@@ -19,11 +22,40 @@
             </a>
         </li>
         <li>
-            <a href="{{ url('adminprofile') }}" class="side-menu">
+            <a  href="javascript:;" href="{{ url('pending-registration') }}" class="side-menu">
                 <div class="side-menu__icon"> <i data-lucide="user-minus"></i> </div>
                 <div class="side-menu__title"> Pending Registration </div>
+
+                <div class="side-menu__sub-icon "> <i data-lucide="chevron-down"></i> </div>
             </a>
+            <ul class="">
+                <li>
+                    <a href="{{ url('disapproved') }}" class="side-menu">
+                        <div class="side-menu__icon"> <i data-lucide="activity"></i> </div>
+                        <div class="side-menu__title"> Disapproved </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="{{ url('waitlist') }}" class="side-menu">
+                        <div class="side-menu__icon"> <i data-lucide="activity"></i> </div>
+                        <div class="side-menu__title"> Waitlist </div>
+                    </a>
+                </li>
+            </ul>
+       
         </li>
+        <li>
+            <a  href="{{ url('approved') }}" class="side-menu">
+                <div class="side-menu__icon"> <i data-lucide="thumbs-up"></i> </div>
+                <div class="side-menu__title"> Approved Org. List </div>
+            </a>
+            </li>
+            <li>
+            <a  href="{{ url('expired') }}" class="side-menu">
+                <div class="side-menu__icon"> <i data-lucide="user-x"></i> </div>
+                <div class="side-menu__title"> Expired Org. List </div>
+            </a>
+            </li>
         <li>
             <a href="javascript:;" class="side-menu">
                 <div class="side-menu__icon"> <i data-lucide="calendar"></i> </div>

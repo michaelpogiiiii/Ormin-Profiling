@@ -32,7 +32,26 @@ class PinamalayanAdminController extends Controller
 
         return view('admin.pinamalayan.profile', compact('pinamalayan_profiles'));
     }
-
+    public function pinamalayanDisapproved(Request $request)
+    {
+  
+        return view('admin.pinamalayan.disapproved');
+    }
+    public function pinamalayanWaitList(Request $request)
+    {
+        
+        return view('admin.pinamalayan.waitlist');
+    }
+    public function pinamalayanApproved(Request $request)
+    {
+   
+         return view('admin.pinamalayan.approved');
+    }
+    public function pinamalayanExpired(Request $request)
+    {
+ 
+     return view('admin.pinamalayan.expired');
+    }
     public function profilePinamalayan($id)
     {
         $profile = PinamalayanProfiles::where('id', $id)->get();

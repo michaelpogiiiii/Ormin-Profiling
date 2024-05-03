@@ -78,6 +78,19 @@ use App\Models\VictoriaMonReport;
 class AdminController extends Controller
 {
     // Show All profiles
+    public function Approved(Request $request)
+    {
+        $currentDate = Carbon::now('Asia/Manila')->toDateString();
+        $allProfiles = new Collection();
+         return view('pydc.approved');
+    }
+    public function Expired(Request $request)
+    {
+        $currentDate = Carbon::now('Asia/Manila')->toDateString();
+        $allProfiles = new Collection();
+     return view('pydc.expired');
+    }
+    
     public function adminProfile(Request $request)
     {
         $currentDate = Carbon::now('Asia/Manila')->toDateString();
@@ -539,8 +552,8 @@ class AdminController extends Controller
     //         $currentPage,
     //         ['path' => $request->url(), 'query' => $request->query()]
     //     );
-    //     return view('pydc.accomplishment', compact('paginator'));
-    // }
+    //    return view('pydc.accomplishment', compact('paginator'));
+   // }
 
     public function accReport(Request $request)
     {

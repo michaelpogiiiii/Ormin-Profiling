@@ -32,7 +32,26 @@ class PolaAdminController extends Controller
 
         return view('admin.pola.profile', compact('pola_profiles'));
     }
-
+    public function polaDisapproved(Request $request)
+    {
+  
+        return view('admin.pola.disapproved');
+    }
+    public function polaWaitList(Request $request)
+    {
+        
+        return view('admin.pola.waitlist');
+    }
+    public function polaApproved(Request $request)
+    {
+   
+         return view('admin.pola.approved');
+    }
+    public function polaExpired(Request $request)
+    {
+ 
+     return view('admin.pola.expired');
+    }
     public function profilePola($id)
     {
         $profile = PolaProfiles::where('id', $id)->get();

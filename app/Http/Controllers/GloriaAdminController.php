@@ -7,11 +7,14 @@ use App\Models\GloriaProfiles;
 use App\Models\GloriaEvent;
 use App\Models\GloriaMonReport;
 use Illuminate\Http\Request;
-
+use Illuminate\Support\Collection;
 use Illuminate\Support\Facades\DB;
+use Carbon\Carbon;
+
 
 class GloriaAdminController extends Controller
 {
+    
     public function gloriaProfile(Request $request)
     {
         $gloria_profiles = DB::table('gloria_profiles');
@@ -32,7 +35,26 @@ class GloriaAdminController extends Controller
 
         return view('admin.gloria.profile', compact('gloria_profiles'));
     }
-
+    public function gloriaDisApproved(Request $request)
+    {
+  
+        return view('admin.gloria.disapproved');
+    }
+    public function gloriaWaitList(Request $request)
+    {
+        
+        return view('admin.gloria.waitlist');
+    }
+    public function gloriaApproved(Request $request)
+    {
+   
+         return view('admin.gloria.approved');
+    }
+    public function gloriaExpired(Request $request)
+    {
+ 
+     return view('admin.gloria.expired');
+    }
     public function profileGloria($id)
     {
         $profile = GloriaProfiles::where('id', $id)->get();

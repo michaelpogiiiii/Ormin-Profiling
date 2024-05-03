@@ -32,7 +32,26 @@ class RoxasAdminController extends Controller
 
         return view('admin.roxas.profile', compact('roxas_profiles'));
     }
-
+    public function roxasDisapproved(Request $request)
+    {
+  
+        return view('admin.roxas.disapproved');
+    }
+    public function roxasWaitList(Request $request)
+    {
+        
+        return view('admin.roxas.waitlist');
+    }
+    public function roxasApproved(Request $request)
+    {
+   
+         return view('admin.roxas.approved');
+    }
+    public function roxasExpired(Request $request)
+    {
+ 
+     return view('admin.roxas.expired');
+    }
     public function profileRoxas($id)
     {
         $profile = RoxasProfiles::where('id', $id)->get();

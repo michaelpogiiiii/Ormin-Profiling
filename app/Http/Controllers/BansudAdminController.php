@@ -33,7 +33,25 @@ class BansudAdminController extends Controller
 
         return view('admin.bansud.profile', compact('bansud_profiles'));
     }
-
+    public function bansudDisapproved(Request $request)
+    {
+  
+        return view('admin.bansud.disapproved');
+    }
+    public function bansudWaitList(Request $request)
+    {
+        
+        return view('admin.bansud.waitlist');
+    }
+    public function bansudApproved(Request $request)
+    {
+   
+         return view('admin.bansud.approved');
+    }
+    public function bansudExpired(Request $request)
+    {
+     return view('admin.bansud.expired');
+    }
     public function profileBansud($id)
     {
         $profile = BansudProfiles::where('id', $id)->get();

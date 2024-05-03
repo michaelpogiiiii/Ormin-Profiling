@@ -32,7 +32,25 @@ class CalapanAdminController extends Controller
 
         return view('admin.calapan.profile', compact('calapan_profiles'));
     }
-
+    public function calapanDisapproved(Request $request)
+    {
+  
+        return view('admin.calapan.disapproved');
+    }
+    public function calapanWaitList(Request $request)
+    {
+        
+        return view('admin.calapan.waitlist');
+    }
+    public function calapanApproved(Request $request)
+    {
+   
+         return view('admin.calapan.approved');
+    }
+    public function calapanExpired(Request $request)
+    {
+     return view('admin.calapan.expired');
+    }
     public function profileCalapan($id)
     {
         $profile = CalapanProfiles::where('id', $id)->get();

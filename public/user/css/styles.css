@@ -87,6 +87,8 @@ h6 {
 .p-small {
 	font-size: 0.875rem;
 	line-height: 1.5rem;
+	margin-top: 40px;
+	margin-bottom: 0.5rem;
 }
 
 .testimonial-text {
@@ -1411,6 +1413,7 @@ a:hover.back-to-top {
 .ex-cards-2 .card .price {
 	margin-bottom: 0.5rem;
 }
+
 
 .ex-cards-2 .card .currency {
 	position: relative;

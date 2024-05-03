@@ -32,7 +32,26 @@ class MansalayAdminController extends Controller
 
         return view('admin.mansalay.profile', compact('mansalay_profiles'));
     }
-
+    public function mansalayDisapproved(Request $request)
+    {
+  
+        return view('admin.mansalay.disapproved');
+    }
+    public function mansalayWaitList(Request $request)
+    {
+        
+        return view('admin.mansalay.waitlist');
+    }
+    public function mansalayApproved(Request $request)
+    {
+   
+         return view('admin.mansalay.approved');
+    }
+    public function mansalayExpired(Request $request)
+    {
+ 
+     return view('admin.mansalay.expired');
+    }
     public function profileMansalay($id)
     {
         $profile = MansalayProfiles::where('id', $id)->get();

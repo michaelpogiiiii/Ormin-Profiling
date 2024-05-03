@@ -32,7 +32,25 @@ class BongabongAdminController extends Controller
 
         return view('admin.bongabong.profile', compact('bongabong_profiles'));
     }
-
+    public function bongabongDisapproved(Request $request)
+    {
+  
+        return view('admin.bongabongdisapproved');
+    }
+    public function bongabongWaitList(Request $request)
+    {
+        
+        return view('admin.bongabong.waitlist');
+    }
+    public function bongabongApproved(Request $request)
+    {
+   
+         return view('admin.bongabong.approved');
+    }
+    public function bongabongExpired(Request $request)
+    {
+     return view('admin.bongabong.expired');
+    }
     public function profileBongabong($id)
     {
         $profile = BongabongProfiles::where('id', $id)->get();

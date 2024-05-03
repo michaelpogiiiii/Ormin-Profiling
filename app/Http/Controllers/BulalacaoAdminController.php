@@ -32,7 +32,25 @@ class BulalacaoAdminController extends Controller
 
         return view('admin.bulalacao.profile', compact('bulalacao_profiles'));
     }
-
+    public function bulalacaoDisapproved(Request $request)
+    {
+  
+        return view('admin.bulalacao.disapproved');
+    }
+    public function bulalacaoWaitList(Request $request)
+    {
+        
+        return view('admin.bulalacao.waitlist');
+    }
+    public function bulalacaoApproved(Request $request)
+    {
+   
+         return view('admin.bulalacao.approved');
+    }
+    public function bulalacaoExpired(Request $request)
+    {
+     return view('admin.bulalacao.expired');
+    }
     public function profileBulalacao($id)
     {
         $profile = BulalacaoProfiles::where('id', $id)->get();

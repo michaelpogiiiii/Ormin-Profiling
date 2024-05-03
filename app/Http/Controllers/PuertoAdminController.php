@@ -32,7 +32,26 @@ class PuertoAdminController extends Controller
 
         return view('admin.puerto.profile', compact('puerto_profiles'));
     }
-
+    public function puertoDisapproved(Request $request)
+    {
+  
+        return view('admin.puerto.disapproved');
+    }
+    public function puertoWaitList(Request $request)
+    {
+        
+        return view('admin.puerto.waitlist');
+    }
+    public function puertoApproved(Request $request)
+    {
+   
+         return view('admin.puerto.approved');
+    }
+    public function puertoExpired(Request $request)
+    {
+ 
+     return view('admin.puerto.expired');
+    }
     public function profilePuerto($id)
     {
         $profile = PuertoProfiles::where('id', $id)->get();

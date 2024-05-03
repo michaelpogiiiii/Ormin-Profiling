@@ -32,7 +32,26 @@ class SocorroAdminController extends Controller
 
         return view('admin.socorro.profile', compact('socorro_profiles'));
     }
-
+    public function socorroDisapproved(Request $request)
+    {
+  
+        return view('admin.socorro.disapproved');
+    }
+    public function socorroWaitList(Request $request)
+    {
+        
+        return view('admin.socorro.waitlist');
+    }
+    public function socorroApproved(Request $request)
+    {
+   
+         return view('admin.socorro.approved');
+    }
+    public function socorroExpired(Request $request)
+    {
+ 
+     return view('admin.socorro.expired');
+    }
     public function profileSocorro($id)
     {
         $profile = SocorroProfiles::where('id', $id)->get();

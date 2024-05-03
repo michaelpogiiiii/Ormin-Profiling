@@ -32,7 +32,26 @@ class NaujanAdminController extends Controller
 
         return view('admin.naujan.profile', compact('naujan_profiles'));
     }
-
+    public function naujanDisapproved(Request $request)
+    {
+  
+        return view('admin.naujan.disapproved');
+    }
+    public function naujanWaitList(Request $request)
+    {
+        
+        return view('admin.naujan.waitlist');
+    }
+    public function naujanApproved(Request $request)
+    {
+   
+         return view('admin.naujan.approved');
+    }
+    public function naujanExpired(Request $request)
+    {
+ 
+     return view('admin.naujan.expired');
+    }
     public function profileNaujan($id)
     {
         $profile = NaujanProfiles::where('id', $id)->get();

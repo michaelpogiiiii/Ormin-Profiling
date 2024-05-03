@@ -32,7 +32,26 @@ class VictoriaAdminController extends Controller
 
         return view('admin.victoria.profile', compact('victoria_profiles'));
     }
-
+    public function victoriaDisapproved(Request $request)
+    {
+  
+        return view('admin.victoria.disapproved');
+    }
+    public function victoriaWaitList(Request $request)
+    {
+        
+        return view('admin.victoria.waitlist');
+    }
+    public function victoriaApproved(Request $request)
+    {
+   
+         return view('admin.victoria.approved');
+    }
+    public function victoriaExpired(Request $request)
+    {
+ 
+     return view('admin.victoria.expired');
+    }
     public function profileVictoria($id)
     {
         $profile = VictoriaProfiles::where('id', $id)->get();

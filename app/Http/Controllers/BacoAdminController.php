@@ -32,7 +32,25 @@ class BacoAdminController extends Controller
 
         return view('admin.baco.profile', compact('baco_profiles'));
     }
-
+    public function bacoDisapproved(Request $request)
+    {
+  
+        return view('admin.baco.disapproved');
+    }
+    public function bacoWaitList(Request $request)
+    {
+        
+        return view('admin.baco.waitlist');
+    }
+    public function bacoApproved(Request $request)
+    {
+   
+         return view('admin.baco.approved');
+    }
+    public function bacoExpired(Request $request)
+    {
+     return view('admin.baco.expired');
+    }
     public function profileBaco($id)
     {
         $profile = BacoProfiles::where('id', $id)->get();

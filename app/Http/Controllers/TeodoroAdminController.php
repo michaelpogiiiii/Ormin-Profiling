@@ -32,7 +32,26 @@ class TeodoroAdminController extends Controller
 
         return view('admin.teodoro.profile', compact('teodoro_profiles'));
     }
-
+    public function teodoroDisapproved(Request $request)
+    {
+  
+        return view('admin.teodoro.disapproved');
+    }
+    public function teodoroWaitList(Request $request)
+    {
+        
+        return view('admin.teodoro.waitlist');
+    }
+    public function teodoroApproved(Request $request)
+    {
+   
+         return view('admin.teodoro.approved');
+    }
+    public function teodoroExpired(Request $request)
+    {
+ 
+     return view('admin.teodoro.expired');
+    }
     public function profileTeodoro($id)
     {
         $profile = TeodoroProfiles::where('id', $id)->get();

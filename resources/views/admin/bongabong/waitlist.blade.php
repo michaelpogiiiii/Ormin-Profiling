@@ -5,14 +5,14 @@
 
 <head>
     <meta charset="utf-8">
-    <link href="admin/dist/images/logo.svg" rel="shortcut icon">
+    <link href="user/images/goyddbgfinalogo.png" rel="shortcut icon">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description"
         content="Tinker admin is super flexible, powerful, clean & modern responsive tailwind admin template with unlimited possibilities.">
     <meta name="keywords"
         content="admin template, Tinker Admin Template, dashboard template, flat admin template, responsive admin template, web app">
     <meta name="author" content="LEFT4CODE">
-    <title>Disapproved</title>
+    <title>Waitlist</title>
     <!-- BEGIN: CSS Assets-->
     <!-- CSS -->
     <!-- CSS -->
@@ -55,11 +55,10 @@
 
 <body class="py-5 md:py-0 bg-black/[0.15] dark:bg-transparent">
 
-
-    @include('pydc.mobile')
+    @include('admin.bongabong.mobile')
 
     <div class="flex mt-[4.7rem] md:mt-0 overflow-hidden">
-        @include('pydc.sidebar')
+        @include('admin.bongabong.sidebar')
 
         <!-- BEGIN: Content -->
         <div class="content">
@@ -68,17 +67,17 @@
                 <!-- BEGIN: Breadcrumb -->
                 <nav aria-label="breadcrumb" class="-intro-x mr-auto hidden sm:flex">
                     <ol class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="#">Admin</a></li>
+                        <li class="breadcrumb-item"><a href="#">Bongabong Admin</a></li>
                         <li class="breadcrumb-item active" aria-current="page">Pending Registration</li>
-                        <li class="breadcrumb-item active" aria-current="page">Disapproved</li>
+                        <li class="breadcrumb-item active" aria-current="page">Waitlist</li>
                     </ol>
                 </nav>
-                <x-app-layout></x-app-layout>
+               
                 <!-- END: Breadcrumb -->
             </div>
             <!-- END: Top Bar -->
             <div class="body-top mt-2" style="display: flex; justify-content:space-between;">
-                <form action="{{ url('disapproved') }}" type="GET">
+                <form action="{{ url('bongabong_waitlist') }}" type="GET">
                     <input type="search" name="users" placeholder="Search Profile" autocomplete="off" class="rounded"
                         style="color:rgb(80, 91, 91);">
                     <button class="btn btn-success mt-1"><i class="fa fa-search"></i></button>
@@ -86,13 +85,12 @@
 
                 <button onclick="printTable()" class="btn btn-success"> <i class="fa fa-print text-dark"
                         style="font-size: 40px"></i> </button>
-</div>
-
+                </div>
 <table class="table" id="tablePrint" style= "border: 2px grey solid; margin-top: 40px"  >
                 <tbody>
                 <thead>
                     <tr>
-                        <th>Organization Name</th>
+                        <th>Organization</th>
                         <th>File Status</th>
                         <th>Status</th>
                         <th>Dis. Date</th>
@@ -109,7 +107,6 @@
        
          
     </div>
-   
-
+    <script src="admin/dist/js/app.js"></script>
 </body>
 </html>

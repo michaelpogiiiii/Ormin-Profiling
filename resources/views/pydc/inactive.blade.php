@@ -5,7 +5,7 @@
 
 <head>
     <meta charset="utf-8">
-    <link href="admin/dist/images/logo.svg" rel="shortcut icon">
+    <link href="user/images/goyddbgfinalogo.png" rel="shortcut icon">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description"
         content="Tinker admin is super flexible, powerful, clean & modern responsive tailwind admin template with unlimited possibilities.">
@@ -14,6 +14,7 @@
     <meta name="author" content="LEFT4CODE">
     <title>Admin</title>
     <!-- BEGIN: CSS Assets-->
+    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
 
     <!-- JavaScript -->
@@ -25,26 +26,58 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <!-- END: CSS Assets-->
     <style>
+ 
+
         table {
+
+            width: 100%;
+            font-family: sans-serif;
+            font-weight: 100;
             border-collapse: collapse;
             width: 100%;
+           
+            overflow: hidden;
+            box-shadow: -6px -6px 10px #f9f9f9,
+                         6px 6px 10px #00000026;
         }
 
         th,
         td {
-            border: 1px solid black;
-            text-align: left;
-            padding: 8px;
-            text-align: center;
+            background-color: white;
+         padding: 15px;
+         color: black;
+         text-align: center;
+         border-color: gray;
         }
 
         th {
-            background-color: #4CAF50;
+            background-color: green;
             color: white;
         }
 
         tr:nth-child(even) {
             background-color: #f2f2f2;
+        }
+        tbody tr:hover {
+            background-color: #ffffff4d;
+        }
+        tbody td:hover:before {
+            content: "";
+            position: absolute;
+            background-color: #ffffff33;
+            left: 0;
+            right: 0;
+            top: -9999px;
+            bottom: -9999px;
+            z-index: -1;
+        }
+        .btn{
+            background-color: #efefef;
+            border: none;
+            border-radius: 25px;
+            color: #424242;
+            box-shadow: -6px -6px 10px #f9f9f9,
+                         6px 6px 10px #00000026;
         }
     </style>
 </head>
@@ -64,7 +97,7 @@
                 <!-- BEGIN: Breadcrumb -->
                 <nav aria-label="breadcrumb" class="-intro-x mr-auto hidden sm:flex">
                     <ol class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="#">Admin</a></li>
+                        <li class="breadcrumb-item"><a href="#">Super Admin</a></li>
                         <li class="breadcrumb-item active" aria-current="page">Registered Profiles > <span
                                 class="text-danger">Inactive</span></li>
                     </ol>

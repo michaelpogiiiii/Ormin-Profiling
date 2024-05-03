@@ -5,7 +5,7 @@
 
 <head>
     <meta charset="utf-8">
-    <link href="admin/dist/images/logo.svg" rel="shortcut icon">
+    <link href="user/images/goyddbgfinalogo.png" rel="shortcut icon">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description"
         content="Tinker admin is super flexible, powerful, clean & modern responsive tailwind admin template with unlimited possibilities.">
@@ -188,7 +188,7 @@
                 <!-- BEGIN: Breadcrumb -->
                 <nav aria-label="breadcrumb" class="-intro-x mr-auto hidden sm:flex">
                     <ol class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="#">Admin</a></li>
+                        <li class="breadcrumb-item"><a href="#">Super Admin</a></li>
                         <li class="breadcrumb-item active" aria-current="page">Users</li>
                     </ol>
                 </nav>
@@ -226,22 +226,22 @@
                         <td>
                             @php
                                 $usertypes = [
-                                    1 => 'SuperAdmin',
-                                    2 => 'BacodAdmin',
-                                    3 => 'BansudAdmin',
-                                    4 => 'BongabongAdmin',
-                                    5 => 'BulalacaoAdmin',
-                                    6 => 'CalapanAdmin',
-                                    7 => 'GloriaAdmin',
-                                    8 => 'MansalayAdmin',
-                                    9 => 'NaujanAdmin',
-                                    10 => 'PinamalayanAdmin',
-                                    11 => 'PolaAdmin',
-                                    12 => 'PuertoAdmin',
-                                    13 => 'RoxasAdmin',
-                                    14 => 'SanTeodoroAdmin',
-                                    15 => 'SocorroAdmin',
-                                    16 => 'VictoriaAdmin',
+                                    1 => 'Super Admin',
+                                    2 => 'Baco Admin',
+                                    3 => 'Bansud Admin',
+                                    4 => 'Bongabong Admin',
+                                    5 => 'Bulalacao Admin',
+                                    6 => 'Calapan Admin',
+                                    7 => 'Gloria Admin',
+                                    8 => 'Mansalay Admin',
+                                    9 => 'Naujan Admin',
+                                    10 => 'Pinamalayan Admin',
+                                    11 => 'Pola Admin',
+                                    12 => 'Puerto Admin',
+                                    13 => 'Roxas Admin',
+                                    14 => 'SanTeodoro Admin',
+                                    15 => 'Socorro Admin',
+                                    16 => 'Victoria Admin',
                                 ];
                             @endphp
 

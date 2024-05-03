@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
+    <link href="admin/dist/images/logo.svg" rel="shortcut icon">
     <!-- SEO Meta Tags -->
     <meta name="description" content="Your description">
     <meta name="author" content="Your name">
@@ -19,9 +19,11 @@
     <meta name="twitter:card" content="summary_large_image"> <!-- to have large image post format in Twitter -->
 
     <!-- Webpage Title -->
-    <title>PYDC</title>
+    <title>GO-YDD</title>
 
     <!-- Styles -->
+  
+
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400&display=swap"
         rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
@@ -139,12 +141,84 @@
             color: #424242;
            
         }
+        .slideshow-container {
+      position: relative;
+      max-width: 100%;
+      overflow: hidden;
+      text-align: center; /* Center align all content */
+      background-image: url('carousel_bg.png'); /* Replace 'background.jpg' with the path to your background image */
+      background-size: cover; /* This ensures the background image covers the entire container */
+      background-position: center; /* This centers the background image */
+    /* Add any other styling you need for the container */
+}
+
+    .slide {
+      display: none;
+      margin: 0 auto; /* Center align slides */
+      animation: fade 1s linear; /* Linear fading effect animation */
+      position: relative;
+    }
+
+    .slide img {
+      width: 85%;
+  
+    }
+
+    .prev33, .next33 {
+      cursor: pointer;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: auto;
+      padding: 16px;
+      background-color: transparent;
+      color: white;
+      font-weight: bold;
+      font-size: 18px;
+      transition: background-color 0.3s;
+    }
+
+    .prev:hover, .next:hover {
+      background-color: rgb(9, 36, 9);
+    }
+
+    .indicator-container {
+      position: absolute;
+      left: 0;
+      right: 0;
+      margin-top: -40px; /* Center align indicators */
+    }
+
+    .indicator {
+      cursor: pointer;
+      display: inline-block;
+      width: 10px;
+      height: 10px;
+      margin: 0 8px;
+      background-color: #add3c1;
+      border-radius: 50%;
+    }
+
+    .active-indicator {
+      background-color: rgb(9, 36, 9);
+    }
+
+    @keyframes fade {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+
+
     </style>
 </head>
 
 <body data-spy="scroll" data-target=".fixed-top">
 
-<div style="background-image: url('bg2.png'); background-size: cover; background-position: center; background-repeat: no-repeat; height: 700px;">
+<div style="background-image: url('bg2.png'); background-size: cover;  background-repeat: no-repeat; width: 100%; padding: 20px; height: 700px; ">
    
 <!-- Navigation -->
     <nav class="navbar navbar-expand-lg fixed-top navbar-dark">
@@ -193,7 +267,7 @@
     </nav> <!-- end of navbar -->
     <!-- end of navigation -->
 
-
+   
     <!-- Header -->
     <header id="header" class="header">
         <div class="container">
@@ -227,6 +301,51 @@
     </header> <!-- end of header -->
     <!-- end of header -->
 
+    <!-- For Slideshow -->
+    <div class="slideshow-container">
+    <div class="slide">
+      <img src="img_1.webp" alt="Slide 1">
+      <div class="indicator-container">
+        <span class="indicator" onclick="currentSlide(1)"></span>
+        <span class="indicator" onclick="currentSlide(2)"></span>
+        <span class="indicator" onclick="currentSlide(3)"></span>
+      </div>
+    </div>
+    <div class="slide">
+      <img src="img_2.webp" alt="Slide 2">
+      <div class="indicator-container">
+        <span class="indicator" onclick="currentSlide(4)"></span>
+        <span class="indicator" onclick="currentSlide(5)"></span>
+        <span class="indicator" onclick="currentSlide(6)"></span>
+      </div>
+    </div>
+    <div class="slide">
+      <img src="img_3.webp" alt="Slide 3">
+      <div class="indicator-container">
+        <span class="indicator" onclick="currentSlide(7)"></span>
+        <span class="indicator" onclick="currentSlide(8)"></span>
+        <span class="indicator" onclick="currentSlide(9)"></span>
+      </div>
+    </div>
+    <!-- Add more slides as needed -->
+    <div class="slide">
+      <img src="img_1.webp" alt="Slide 4">
+      <div class="indicator-container">
+        <span class="indicator" onclick="currentSlide(10)"></span>
+        <span class="indicator" onclick="currentSlide(11)"></span>
+        <span class="indicator" onclick="currentSlide(12)"></span>
+      </div>
+    </div>
+    <div class="slide">
+      <img src="img_2.webp" alt="Slide 5">
+      <div class="indicator-container">
+        <span class="indicator" onclick="currentSlide(13)"></span>
+        <span class="indicator" onclick="currentSlide(14)"></span>
+        <span class="indicator" onclick="currentSlide(15)"></span>
+      </div>
+    </div>
+
+
 
     {{-- About --}}
     @include('about')
@@ -235,10 +354,10 @@
 
     <!-- Copyright -->
     <div class="copyright " id="contact">
-        <div class="container">
+       
             <div class="row">
                 <div class="col-lg-12 p-5">
-                    <p><i class="fa fa-envelope" style="font-size:20px;"></i> pydcormin@yahoo.com</p>
+                    <p><i class="fab fa-yahoo" style="font-size:20px;"></i> pydcormin@yahoo.com</p>
                     <p><i class="fa fa-envelope" style="font-size:20px;"></i> pgormpydc@gmail.com</p>
                     <p><a href="https://www.youtube.com/@orientalmindoropydc2757" target="_blank"><i class="fab fa-youtube"
                                 style="font-size:20px; "></i></a> www.youtube.com/@orientalmindoropydc2757</p>
@@ -254,6 +373,7 @@
 
 
     <!-- Scripts -->
+
     <script src="user/js/jquery.min.js"></script> <!-- jQuery for Bootstrap's JavaScript plugins -->
     <script src="user/js/bootstrap.min.js"></script> <!-- Bootstrap framework -->
     <script src="user/js/jquery.easing.min.js"></script> <!-- jQuery Easing for smooth scrolling between anchors -->
@@ -264,6 +384,36 @@
     <script>
         const year = new Date().getFullYear();
         document.getElementById('year').innerText = year;
+    </script>
+    <!-- JavaScript for Slideshow -->
+    <script>
+     let slideIndex = 0;
+    showSlides();
+
+    function showSlides() {
+      let slides = document.getElementsByClassName("slide");
+      let indicators = document.getElementsByClassName("indicator");
+      for (let i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+      }
+      slideIndex++;
+      if (slideIndex > slides.length) {slideIndex = 1}    
+      for (let i = 0; i < indicators.length; i++) {
+        indicators[i].classList.remove("active-indicator");  
+      }
+      slides[slideIndex-1].style.display = "block";
+      let currentSlideIndicators = slides[slideIndex - 1].getElementsByClassName("indicator");
+      currentSlideIndicators[slideIndex % 3].classList.add("active-indicator"); // % 3 for cycling through indicators
+      setTimeout(showSlides, 2000); // Change image every 2 seconds
+    }
+
+    function plusSlides(n) {
+      showSlides(slideIndex += n);
+    }
+
+    function currentSlide(n) {
+      showSlides(slideIndex = n);
+    }
     </script>
 </body>
 

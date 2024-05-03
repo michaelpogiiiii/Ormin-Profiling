@@ -71,11 +71,8 @@ Route::middleware([
 //Super Admin
 Route::group(['middleware' => 'superadmin'], function () {
     Route::get('/adminprofile', [AdminController::class, 'adminProfile']);
-    Route::get('/pending-registration', [pendingregistration::class, 'pendingRegistration']);
-    Route::get('/disapproved', [pendingregistration ::class, 'disApproved']);
-    Route::get('/waitlist', [pendingregistration ::class, 'waitList']);
-    Route::get('/approved', [approved ::class, 'Approved']);
-    Route::get('/expired', [ExpiredController ::class, 'Expired']);
+    Route::get('/approved', [AdminController::class, 'Approved']);
+    Route::get('/expired', [AdminController ::class, 'Expired']);
     Route::get('/municipality-users', [AdminController::class, 'municipalityUser']);
     Route::post('/user-profile', [AdminController::class, 'userProfile']);
     Route::get('/search-user', [AdminController::class, 'searchUser']);
@@ -229,6 +226,11 @@ Route::group(['middleware' => 'bansudadmin'], function () {
     Route::post('/add-bansud-mon', [BansudAdminController::class, 'addBansudMon']);
     Route::get('/download-bansud-mon/{id}/{municipality}', [BansudAdminController::class, 'downloadBansudMon']);
     Route::get('/delete-bansud-mon/{id}/{municipality}', [BansudAdminController::class, 'deleteBansudMon']);
+   //new modules
+    Route::get('/bansud_disapproved', [BansudAdminController ::class, 'bansudDisapproved']);
+    Route::get('/bansud_waitlist', [BansudAdminController ::class, 'bansudWaitList']);
+    Route::get('/bansud_approved', [BansudAdminController ::class, 'bansudApproved']);
+    Route::get('/bansud_expired', [BansudAdminController ::class, 'bansudExpired']);
 });
 // Baco
 Route::group(['middleware' => 'bacoadmin'], function () {
@@ -248,6 +250,11 @@ Route::group(['middleware' => 'bacoadmin'], function () {
     Route::post('/add-baco-mon', [BacoAdminController::class, 'addBacoMon']);
     Route::get('/download-baco-mon/{id}/{municipality}', [BacoAdminController::class, 'downloadBacoMon']);
     Route::get('/delete-baco-mon/{id}/{municipality}', [BacoAdminController::class, 'deleteBacoMon']);
+  //new modules
+    Route::get('/baco_disapproved', [BacoAdminController ::class, 'bacoDisapproved']);
+    Route::get('/baco_waitlist', [BacoAdminController ::class, 'bacoWaitList']);
+    Route::get('/baco_approved', [BacoAdminController ::class, 'bacoApproved']);
+    Route::get('/baco_expired', [BacoAdminController ::class, 'bacoExpired']);
 });
 // Bongabong
 Route::group(['middleware' => 'bongabongadmin'], function () {
@@ -267,6 +274,11 @@ Route::group(['middleware' => 'bongabongadmin'], function () {
     Route::post('/add-bongabong-mon', [BongabongAdminController::class, 'addBongabongMon']);
     Route::get('/download-bongabong-mon/{id}/{municipality}', [BongabongAdminController::class, 'downloadBongabongMon']);
     Route::get('/delete-bongabong-mon/{id}/{municipality}', [BongabongAdminController::class, 'deleteBongabongMon']);
+    //new modules
+    Route::get('/bongabong_disapproved', [BongabongAdminController ::class, 'bongabongDisapproved']);
+    Route::get('/bongabong_waitlist', [BongabongAdminController ::class, 'bongabongWaitList']);
+    Route::get('/bongabong_approved', [BongabongAdminController ::class, 'bongabongApproved']);
+    Route::get('/bongabong_expired', [BongabongAdminController ::class, 'bongabongExpired']);
 });
 // Bulalacao
 Route::group(['middleware' => 'bulalacaoadmin'], function () {
@@ -286,6 +298,11 @@ Route::group(['middleware' => 'bulalacaoadmin'], function () {
     Route::post('/add-bulalacao-mon', [BulalacaoAdminController::class, 'addBulalacaoMon']);
     Route::get('/download-bulalacao-mon/{id}/{municipality}', [BulalacaoAdminController::class, 'downloadBulalacaoMon']);
     Route::get('/delete-bulalacao-mon/{id}/{municipality}', [BulalacaoAdminController::class, 'deleteBulalacaoMon']);
+    //new modules
+    Route::get('/bulalacao_disapproved', [BulalacaoAdminController ::class, 'bulalacaoDisapproved']);
+    Route::get('/bulalacao_waitlist', [BulalacaoAdminController ::class, 'bulalacaoWaitList']);
+    Route::get('/bulalacao_approved', [BulalacaoAdminController ::class, 'bulalacaoApproved']);
+    Route::get('/bulalacao_expired', [BulalacaoAdminController ::class, 'bulalacaoExpired']);
 });
 // Calapan
 Route::group(['middleware' => 'calapanadmin'], function () {
@@ -305,6 +322,11 @@ Route::group(['middleware' => 'calapanadmin'], function () {
     Route::post('/add-calapan-mon', [CalapanAdminController::class, 'addCalapanMon']);
     Route::get('/download-calapan-mon/{id}/{municipality}', [CalapanAdminController::class, 'downloadCalapanMon']);
     Route::get('/delete-calapan-mon/{id}/{municipality}', [CalapanAdminController::class, 'deleteCalapanMon']);
+    //new modules
+    Route::get('/calapan_disapproved', [CalapanAdminController ::class, 'calapanDisapproved']);
+    Route::get('/calapan_waitlist', [CalapanAdminController ::class, 'calapanWaitList']);
+    Route::get('/calapan_approved', [CalapanAdminController ::class, 'calapanApproved']);
+    Route::get('/calapan_expired', [CalapanAdminController ::class, 'calapanExpired']);
 });
 // Gloria
 Route::group(['middleware' => 'gloriaadmin'], function () {
@@ -324,6 +346,11 @@ Route::group(['middleware' => 'gloriaadmin'], function () {
     Route::post('/add-gloria-mon', [GloriaAdminController::class, 'addGloriaMon']);
     Route::get('/download-gloria-mon/{id}/{municipality}', [GloriaAdminController::class, 'downloadGloriaMon']);
     Route::get('/delete-gloria-mon/{id}/{municipality}', [GloriaAdminController::class, 'deleteGloriaMon']);
+//new modules
+    Route::get('/gloria_disapproved', [GloriaAdminController ::class, 'gloriaDisApproved']);
+    Route::get('/gloria_waitlist', [GloriaAdminController ::class, 'gloriaWaitList']);
+    Route::get('/gloria_approved', [GloriaAdminController ::class, 'gloriaApproved']);
+    Route::get('/gloria_expired', [GloriaAdminController ::class, 'gloriaExpired']);
 });
 // Mansalay
 Route::group(['middleware' => 'mansalayadmin'], function () {
@@ -343,6 +370,11 @@ Route::group(['middleware' => 'mansalayadmin'], function () {
     Route::post('/add-mansalay-mon', [MansalayAdminController::class, 'addMansalayMon']);
     Route::get('/download-mansalay-mon/{id}/{municipality}', [MansalayAdminController::class, 'downloadMansalayMon']);
     Route::get('/delete-mansalay-mon/{id}/{municipality}', [MansalayAdminController::class, 'deleteMansalayMon']);
+    //new modules
+    Route::get('/mansalay_disapproved', [MansalayAdminController ::class, 'mansalayDisapproved']);
+    Route::get('/mansalay_waitlist', [MansalayAdminController ::class, 'mansalayWaitList']);
+    Route::get('/mansalay_approved', [MansalayAdminController ::class, 'mansalayApproved']);
+    Route::get('/mansalay_expired', [MansalayAdminController ::class, 'mansalayExpired']);
 });
 // Naujan
 Route::group(['middleware' => 'naujanadmin'], function () {
@@ -362,6 +394,11 @@ Route::group(['middleware' => 'naujanadmin'], function () {
     Route::post('/add-naujan-mon', [NaujanAdminController::class, 'addNaujanMon']);
     Route::get('/download-naujan-mon/{id}/{municipality}', [NaujanAdminController::class, 'downloadNaujanMon']);
     Route::get('/delete-naujan-mon/{id}/{municipality}', [NaujanAdminController::class, 'deleteNaujanMon']);
+    //new modules
+    Route::get('/naujan_disapproved', [NaujanAdminController ::class, 'naujanDisapproved']);
+    Route::get('/naujan_waitlist', [NaujanAdminController ::class, 'naujanWaitList']);
+    Route::get('/naujan_approved', [NaujanAdminController ::class, 'naujanApproved']);
+    Route::get('/naujan_expired', [NaujanAdminController ::class, 'naujanExpired']);
 });
 // Pinamalayan
 Route::group(['middleware' => 'pinamalayanadmin'], function () {
@@ -381,6 +418,11 @@ Route::group(['middleware' => 'pinamalayanadmin'], function () {
     Route::post('/add-pinamalayan-mon', [PinamalayanAdminController::class, 'addPinamalayanMon']);
     Route::get('/download-pinamalayan-mon/{id}/{municipality}', [PinamalayanAdminController::class, 'downloadPinamalayanMon']);
     Route::get('/delete-pinamalayan-mon/{id}/{municipality}', [PinamalayanAdminController::class, 'deletePinamalayanMon']);
+    //new modules
+    Route::get('/pinamalayan_disapproved', [PinamalayanAdminController ::class, 'pinamalayanDisapproved']);
+    Route::get('/pinamalayan_waitlist', [PinamalayanAdminController ::class, 'pinamalayanWaitList']);
+    Route::get('/pinamalayan_approved', [PinamalayanAdminController ::class, 'pinamalayanApproved']);
+    Route::get('/pinamalayan_expired', [PinamalayanAdminController ::class, 'pinamalayanExpired']);
 });
 // Pola
 Route::group(['middleware' => 'polaadmin'], function () {
@@ -400,6 +442,11 @@ Route::group(['middleware' => 'polaadmin'], function () {
     Route::post('/add-pola-mon', [PolaAdminController::class, 'addPolaMon']);
     Route::get('/download-pola-mon/{id}/{municipality}', [PolaAdminController::class, 'downloadPolaMon']);
     Route::get('/delete-pola-mon/{id}/{municipality}', [PolaAdminController::class, 'deletePolaMon']);
+    //new modules
+    Route::get('/pola_disapproved', [PolaAdminController ::class, 'polaDisapproved']);
+    Route::get('/pola_waitlist', [PolaAdminController ::class, 'polaWaitList']);
+    Route::get('/pola_approved', [PolaAdminController ::class, 'polaApproved']);
+    Route::get('/pola_expired', [PolaAdminController ::class, 'polaExpired']);
 });
 // Puerto
 Route::group(['middleware' => 'puertoadmin'], function () {
@@ -419,6 +466,11 @@ Route::group(['middleware' => 'puertoadmin'], function () {
     Route::post('/add-puerto-mon', [PuertoAdminController::class, 'addPuertoMon']);
     Route::get('/download-puerto-mon/{id}/{municipality}', [PuertoAdminController::class, 'downloadPuertoMon']);
     Route::get('/delete-puerto-mon/{id}/{municipality}', [PuertoAdminController::class, 'deletePuertoMon']);
+    //new modules
+    Route::get('/puerto_disapproved', [PuertoAdminController ::class, 'puertoDisapproved']);
+    Route::get('/puerto_waitlist', [PuertoAdminController ::class, 'puertoWaitList']);
+    Route::get('/puerto_approved', [PuertoAdminController ::class, 'puertoApproved']);
+    Route::get('/puerto_expired', [PuertoAdminController ::class, 'puertoExpired']);
 });
 // Roxas
 Route::group(['middleware' => 'roxasadmin'], function () {
@@ -438,6 +490,11 @@ Route::group(['middleware' => 'roxasadmin'], function () {
     Route::post('/add-roxas-mon', [RoxasAdminController::class, 'addRoxasMon']);
     Route::get('/download-roxas-mon/{id}/{municipality}', [RoxasAdminController::class, 'downloadRoxasMon']);
     Route::get('/delete-roxas-mon/{id}/{municipality}', [RoxasAdminController::class, 'deleteRoxasMon']);
+    //new modules
+    Route::get('/roxas_disapproved', [RoxasAdminController ::class, 'roxasDisapproved']);
+    Route::get('/roxas_waitlist', [RoxasAdminController ::class, 'roxasWaitList']);
+    Route::get('/roxas_approved', [RoxasAdminController ::class, 'roxasApproved']);
+    Route::get('/roxas_expired', [RoxasAdminController ::class, 'roxasExpired']);
 });
 
 // Socorro
@@ -458,6 +515,11 @@ Route::group(['middleware' => 'socorroadmin'], function () {
     Route::post('/add-socorro-mon', [SocorroAdminController::class, 'addSocorroMon']);
     Route::get('/download-socorro-mon/{id}/{municipality}', [SocorroAdminController::class, 'downloadSocorroMon']);
     Route::get('/delete-socorro-mon/{id}/{municipality}', [SocorroAdminController::class, 'deleteSocorroMon']);
+    //new modules
+    Route::get('/socorro_disapproved', [SocorroAdminController ::class, 'socorroDisapproved']);
+    Route::get('/socorro_waitlist', [SocorroAdminController ::class, 'socorroWaitList']);
+    Route::get('/socorro_approved', [SocorroAdminController ::class, 'socorroApproved']);
+    Route::get('/socorro_expired', [SocorroAdminController ::class, 'socorroExpired']);
 });
 
 // Teodoro
@@ -478,6 +540,11 @@ Route::group(['middleware' => 'teodoroadmin'], function () {
     Route::post('/add-teodoro-mon', [TeodoroAdminController::class, 'addTeodoroMon']);
     Route::get('/download-teodoro-mon/{id}/{municipality}', [TeodoroAdminController::class, 'downloadTeodoroMon']);
     Route::get('/delete-teodoro-mon/{id}/{municipality}', [TeodoroAdminController::class, 'deleteTeodoroMon']);
+    //new modules
+    Route::get('/teodoro_disapproved', [TeodoroAdminController ::class, 'teodoroDisapproved']);
+    Route::get('/teodoro_waitlist', [TeodoroAdminController ::class, 'teodoroWaitList']);
+    Route::get('/teodoro_approved', [TeodoroAdminController ::class, 'teodoroApproved']);
+    Route::get('/teodoro_expired', [TeodoroAdminController ::class, 'teodoroExpired']);
 });
 
 // Victoria
@@ -498,4 +565,9 @@ Route::group(['middleware' => 'victoriaadmin'], function () {
     Route::post('/add-victoria-mon', [VictoriaAdminController::class, 'addVictoriaMon']);
     Route::get('/download-victoria-mon/{id}/{municipality}', [VictoriaAdminController::class, 'downloadVictoriaMon']);
     Route::get('/delete-victoria-mon/{id}/{municipality}', [VictoriaAdminController::class, 'deleteVictoriaMon']);
+    //new modules
+    Route::get('/victoria_disapproved', [VictoriaAdminController ::class, 'victoriaDisapproved']);
+    Route::get('/victoria_waitlist', [VictoriaAdminController ::class, 'victoriaWaitList']);
+    Route::get('/victoria_approved', [VictoriaAdminController ::class, 'victoriaApproved']);
+    Route::get('/victoria_expired', [VictoriaAdminController ::class, 'victoriaExpired']);
 });

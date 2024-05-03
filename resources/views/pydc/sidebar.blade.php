@@ -21,27 +21,6 @@
                 <div class="side-menu__title"> Registered Profiles </div>
             </a>
         </li>
-        <li>
-            <a  href="javascript:;" href="{{ url('pending-registration') }}" class="side-menu">
-                <div class="side-menu__icon"> <i data-lucide="user-minus"></i> </div>
-                <div class="side-menu__title"> Pending Registration </div>
-
-                <div class="side-menu__sub-icon "> <i data-lucide="chevron-down"></i> </div>
-            </a>
-            <ul class="">
-                <li>
-                    <a href="{{ url('disapproved') }}" class="side-menu">
-                        <div class="side-menu__icon"> <i data-lucide="activity"></i> </div>
-                        <div class="side-menu__title"> Disapproved </div>
-                    </a>
-                </li>
-                <li>
-                    <a href="{{ url('waitlist') }}" class="side-menu">
-                        <div class="side-menu__icon"> <i data-lucide="activity"></i> </div>
-                        <div class="side-menu__title"> Waitlist </div>
-                    </a>
-                </li>
-            </ul>
        
         </li>
         <li>
@@ -91,13 +70,13 @@
             <ul class="">
                 <li>
                     <a href="{{ url('accomplishment-report') }}" class="side-menu">
-                        <div class="side-menu__icon"> <i data-lucide="file"></i> </div>
+                        <div class="side-menu__icon"> <i data-lucide="folder"></i> </div>
                         <div class="side-menu__title"> Accomplishment Report </div>
                     </a>
                 </li>
                 <li>
                     <a href="{{ url('monitoring-report') }}" class="side-menu">
-                        <div class="side-menu__icon"> <i data-lucide="file"></i> </div>
+                        <div class="side-menu__icon"> <i data-lucide="folder"></i> </div>
                         <div class="side-menu__title"> Monitoring Report </div>
                     </a>
                 </li>

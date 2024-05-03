@@ -72,7 +72,7 @@
                     <ol class="breadcrumb">
                         <li class="breadcrumb-item"><a href="/home">Baco</a></li>
                         <li class="breadcrumb-item active" aria-current="page">Registered Profiles <span
-                                class="text-danger">> Inactive</span></li>
+                                class="text-danger"> Inactive</span></li>
                     </ol>
                 </nav>
                 <!-- END: Breadcrumb -->

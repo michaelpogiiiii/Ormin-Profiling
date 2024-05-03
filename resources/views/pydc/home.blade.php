@@ -5,7 +5,7 @@
 
 <head>
     <meta charset="utf-8">
-    <link href="admin/dist/images/logo.svg" rel="shortcut icon">
+    <link href="user/images/goyddbgfinalogo.png" rel="shortcut icon">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description"
         content="Tinker admin is super flexible, powerful, clean & modern responsive tailwind admin template with unlimited possibilities.">
@@ -87,8 +87,8 @@
             background-color: rgb(255 255 255 / var(--tw-bg-opacity));
             text-align: center;
             font-family: Arial, sans-serif;
-            width: 240px;
-            height: 220px;
+            width: 200px;
+            height: 210px;
 
      
         }
@@ -114,7 +114,7 @@
             color: #fff;
             text-decoration: none;
             border-radius: 4px;
-            transition: background-color 0.3s ease;
+            transition:  0.3s ease;
         }
 
         .container-all div a:hover {
@@ -163,10 +163,11 @@
                 <!-- BEGIN: Breadcrumb -->
                 <nav aria-label="breadcrumb" class="-intro-x mr-auto hidden sm:flex">
                     <ol class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="#">Admin</a></li>
+                        <li class="breadcrumb-item"><a href="#">Super Admin</a></li>
                         <li class="breadcrumb-item active" aria-current="page">Dashboard</li>
                     </ol>
                 </nav>
+                <x-app-layout></x-app-layout>
                 <!-- END: Breadcrumb -->
             </div>
             <!-- END: Top Bar -->
@@ -232,7 +233,7 @@
 
                     <div class="pst-event" style="position:relative;background-color: #fff;box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.25);">
                         <div style="display: flex; justify-content:start; width:95%; margin:auto;height:70px">
-                            <p class="text-muted">Accomplishment <br> <span>Report</span></p>
+                            <p class="text-muted">Accomp.  <br> <span>Report</span></p>
                             <p
                                 style=";border-radius:20px;position:absolute;top:0;right:0;">
                                 <i class="fa fa-file-text-o p-3"

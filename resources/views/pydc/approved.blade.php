@@ -5,7 +5,7 @@
 
 <head>
     <meta charset="utf-8">
-    <link href="admin/dist/images/logo.svg" rel="shortcut icon">
+    <link href="user/images/goyddbgfinalogo.png" rel="shortcut icon">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description"
         content="Tinker admin is super flexible, powerful, clean & modern responsive tailwind admin template with unlimited possibilities.">
@@ -50,6 +50,8 @@
         tr:nth-child(even) {
             background-color: #f2f2f2;
         }
+        
+
     </style>
 
 <body class="py-5 md:py-0 bg-black/[0.15] dark:bg-transparent">
@@ -66,7 +68,7 @@
                 <!-- BEGIN: Breadcrumb -->
                 <nav aria-label="breadcrumb" class="-intro-x mr-auto hidden sm:flex">
                     <ol class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="#">Admin</a></li>
+                        <li class="breadcrumb-item"><a href="#">Super Admin</a></li>
                         <li class="breadcrumb-item active" aria-current="page"> Approved Registration</li>
                     </ol>
                 </nav>
@@ -102,7 +104,6 @@
 </div>
          </div>
     </div>
-
-
+    <script src="admin/dist/js/app.js"></script>
 </body>
 </html>

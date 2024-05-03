@@ -5,7 +5,7 @@
 
 <head>
     <meta charset="utf-8">
-    <link href="admin/dist/images/logo.svg" rel="shortcut icon">
+    <link href="user/images/goyddbgfinalogo.png" rel="shortcut icon">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description"
         content="Tinker admin is super flexible, powerful, clean & modern responsive tailwind admin template with unlimited possibilities.">
@@ -16,6 +16,7 @@
     <!-- BEGIN: CSS Assets-->
     <!-- CSS -->
     <!-- CSS -->
+    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
 
     <!-- JavaScript -->
@@ -66,7 +67,7 @@
                 <!-- BEGIN: Breadcrumb -->
                 <nav aria-label="breadcrumb" class="-intro-x mr-auto hidden sm:flex">
                     <ol class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="#">Admin</a></li>
+                        <li class="breadcrumb-item"><a href="#">Super Admin</a></li>
                         <li class="breadcrumb-item active" aria-current="page"> Expired Organization List </li>
                     </ol>
                 </nav>
@@ -102,6 +103,6 @@
          </div>
          
     </div>
-
+    <script src="admin/dist/js/app.js"></script>
 </body>
 </html>

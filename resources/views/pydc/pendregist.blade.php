@@ -5,17 +5,18 @@
 
 <head>
     <meta charset="utf-8">
-    <link href="admin/dist/images/logo.svg" rel="shortcut icon">
+    <link href="user/images/goyddbgfinalogo.png" rel="shortcut icon">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description"
         content="Tinker admin is super flexible, powerful, clean & modern responsive tailwind admin template with unlimited possibilities.">
     <meta name="keywords"
         content="admin template, Tinker Admin Template, dashboard template, flat admin template, responsive admin template, web app">
     <meta name="author" content="LEFT4CODE">
-    <title>Pending Registration</title>
+    <title>Pending Org. List</title>
     <!-- BEGIN: CSS Assets-->
     <!-- CSS -->
     <!-- CSS -->
+ 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
 
     <!-- JavaScript -->
@@ -42,7 +43,7 @@
                 <!-- BEGIN: Breadcrumb -->
                 <nav aria-label="breadcrumb" class="-intro-x mr-auto hidden sm:flex">
                     <ol class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="#">Admin</a></li>
+                        <li class="breadcrumb-item"><a href="#">Super Admin</a></li>
                         <li class="breadcrumb-item active" aria-current="page">Pending Registration</li>
                     </ol>
                 </nav>
@@ -69,6 +70,18 @@
                         <th class="action-column">Action</th>
                     </tr>
                 </thead>
+          
+                    @foreach ($pendingRegistration as $registration)
+                    <tr>
+                        <td>{{ $registration->Full Name }}</td>
+                        <td>{{ $registration->Age }}</td>
+                        <td>{{ $registration->Gender }}</td>
+                        <td>{{ $registration->Youth Classification }}</td>
+                        <td>{{ $registration->Municipality }}</td>
+                        <td>{{ $registration->Barangay }}</td>
+
+</tr>
+</tbody>
                 </table>
 </div>
          </div>

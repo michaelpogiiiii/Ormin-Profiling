@@ -4,7 +4,7 @@
     <!-- BEGIN: Head -->
     <head>
         <meta charset="utf-8">
-        <link href="admin/dist/images/logo.svg" rel="shortcut icon">
+        <link href="user/images/goyddbgfinalogo.png" rel="shortcut icon">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="description" content="Tinker admin is super flexible, powerful, clean & modern responsive tailwind admin template with unlimited possibilities.">
         <meta name="keywords" content="admin template, Tinker Admin Template, dashboard template, flat admin template, responsive admin template, web app">
@@ -79,6 +79,15 @@
                 background-color: #45a049;
                 }
 
+                .btn{
+            background-color: #efefef;
+            border: none;
+            border-radius: 25px;
+            color: #424242;
+            box-shadow: -6px -6px 10px #f9f9f9,
+                         6px 6px 10px #00000026;
+               }
+
         </style>
     </head>
     <!-- END: Head -->
@@ -96,7 +105,7 @@
                     <!-- BEGIN: Breadcrumb -->
                     <nav aria-label="breadcrumb" class="-intro-x mr-auto hidden sm:flex">
                         <ol class="breadcrumb">
-                            <li class="breadcrumb-item"><a href="/home">Gloria</a></li>
+                            <li class="breadcrumb-item"><a href="/home">Gloria Admin</a></li>
                             <li class="breadcrumb-item active" aria-current="page">Dashboard</li>
                         </ol>
                     </nav>
@@ -107,7 +116,7 @@
                     <div class="up-event">
                         <div style="display: flex; justify-content:space-between; width:95%; margin:auto;height:70px;">
                             <p class="text-muted">Event <br><span>(Upcoming)</span></p>
-                            <p style="background-color: rgb(171, 255, 222);border-radius:20px;"><i class="fa fa-calendar p-3" style="font-size:30px;width:100px;color:rgb(10, 159, 5);"></i></p>
+                            <p style="border-radius:20px;"><i class="fa fa-calendar p-3" style="font-size:30px;width:100px;color:rgb(10, 159, 5);"></i></p>
                         </div>
                         <p class="p-4" style="font-family: 'Abel', sans-serif;font-size:35px;"> {{$event_inc}} </p>
                         <a href="/gloria-incoming-event" class="btn btn-success">View</a>
@@ -116,7 +125,7 @@
                     <div class="pst-event">
                         <div style="display: flex; justify-content:space-between; width:95%; margin:auto;height:70px;">
                             <p class="text-muted">Event <br> <span>(Past)</span></p>
-                            <p style="background-color: rgb(171, 255, 222);border-radius:20px;"><i class="fa fa-calendar-times-o p-3" style="font-size:30px;width:100px;color:rgb(10, 159, 5);"></i></p>
+                            <p style="border-radius:20px;"><i class="fa fa-calendar-times-o p-3" style="font-size:30px;width:100px;color:rgb(10, 159, 5);"></i></p>
                         </div>
                         <p class="p-4" style="font-family: 'Abel', sans-serif;font-size:35px;"> {{$event_pst}} </p>
                         <a href="/gloria-past-event" class="btn btn-success">View</a>
@@ -125,7 +134,7 @@
                     <div class="act-profile">
                         <div style="display: flex; justify-content:space-between; width:95%; margin:auto;height:70px;">
                             <p class="text-muted">Profile <br><span>(Active)</span></p>
-                            <p style="background-color: rgb(171, 255, 222);border-radius:20px;"><i class="fa fa-user p-3" style="font-size:30px;width:100px;color:rgb(10, 159, 5);"></i></p>
+                            <p style="border-radius:20px;"><i class="fa fa-user p-3" style="font-size:30px;width:100px;color:rgb(10, 159, 5);"></i></p>
                         </div>
                         <p class="p-4" style="font-family: 'Abel', sans-serif;font-size:35px;"> {{$active_profile}} </p>
                         <a href="/gloriaprofile" class="btn btn-success">View</a>
@@ -134,7 +143,7 @@
                     <div class="inc-profile">
                         <div style="display: flex; justify-content:space-between; width:95%; margin:auto;height:70px;">
                             <p class="text-muted">Profile <br><span>(Inactive)</span></p>
-                            <p style="background-color: rgb(171, 255, 222);border-radius:20px;"><i class="fa fa-user-times p-3" style="font-size:30px;width:100px;color:rgb(10, 159, 5);"></i></p>
+                            <p style="border-radius:20px;"><i class="fa fa-user-times p-3" style="font-size:30px;width:100px;color:rgb(10, 159, 5);"></i></p>
                         </div>
                         <p class="p-4" style="font-family: 'Abel', sans-serif;font-size:35px;"> {{$inc_profile}} </p>
                         <a href="/gloria-inactive" class="btn btn-success">View</a>
@@ -143,7 +152,7 @@
                     <div class="acc-report">
                         <div style="display: flex; justify-content:space-between; width:95%; margin:auto;height:70px;">
                             <p class="text-muted">Accomplishment <br><span>(Report)</span></p>
-                            <p style="background-color: rgb(171, 255, 222);border-radius:20px;"><i class="fa fa-file-text-o p-3" style="font-size:30px;width:100px;color:rgb(10, 159, 5);"></i></p>
+                            <p style="border-radius:20px;"><i class="fa fa-file-text-o p-3" style="font-size:30px;width:100px;color:rgb(10, 159, 5);"></i></p>
                         </div>
                         <p class="p-4" style="font-family: 'Abel', sans-serif;font-size:35px;"> {{$acc}} </p>
                         <a href="/gloria-accomplishment-report" class="btn btn-success">View</a>
@@ -152,7 +161,7 @@
                     <div class="mon-report">
                         <div style="display: flex; justify-content:space-between; width:95%; margin:auto;height:70px;">
                             <p class="text-muted">Monitoring <br><span>(Report)</span></p>
-                            <p style="background-color: rgb(171, 255, 222);border-radius:20px;"><i class="fa fa-file-text-o p-3" style="font-size:30px;width:100px;color:rgb(10, 159, 5);"></i></p>
+                            <p style="border-radius:20px;"><i class="fa fa-file-text-o p-3" style="font-size:30px;width:100px;color:rgb(10, 159, 5);"></i></p>
                         </div>
                         <p class="p-4" style="font-family: 'Abel', sans-serif;font-size:35px;"> {{$mon}} </p>
                         <a href="/gloria-monitoring-report" class="btn btn-success">View</a>

@@ -196,10 +196,10 @@
 
 <body class="py-5 md:py-0 bg-black/[0.15] dark:bg-transparent">
 
-    @include('admin.bansud.mobile')
+@include('admin.pinamalayan.mobile')
 
     <div class="flex mt-[4.7rem] md:mt-0 overflow-hidden">
-        @include('admin.bansud.sidebar')
+        @include('admin.pinamalayan.sidebar')
 
         <!-- BEGIN: Content -->
         <div class="content">
@@ -216,10 +216,10 @@
             </div>
             <!-- END: Top Bar -->
             <div class="acc-report mt-5">
-                @include('admin.bansud.add-acc')
+                @include('admin.pinamalayan.add-acc')
                 <div class="mt-3 d-flex justify-content-between">
                     <h3 style="font-size:30px;font-weight:700;">Accomplishment Report</h3>
-                    <form action="{{ url('bansud-accomplishment-report') }}" type="GET">
+                    <form action="{{ url('pinamalayan-accomplishment-report') }}" type="GET">
                         <input type="search" name="file" placeholder="Search File" autocomplete="off"
                             class="rounded" style="color:rgb(80, 91, 91);" oninput="delayedSubmit(this)">
                         <button class="btn btn-success mt-1"><i class="fa fa-search"></i></button>

@@ -67,7 +67,7 @@
 
         <nav class="navbar navbar-expand-lg navbar-light shadow-sm">
             <div class="container">
-                <a class="navbar-brand" href="#"><span class="text-primary">PY</span>DC</a>
+                <a class="navbar-brand" href="#"><span class="text-primary">WELCOME</a>
 
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupport"
                     aria-controls="navbarSupport" aria-expanded="false" aria-label="Toggle navigation">
@@ -103,22 +103,17 @@
             </div> <!-- .container -->
         </nav>
     </header>
-
-    <div class="page-hero bg-image overlay-dark" style="background-image: url(../dash/assets/img/pydcbg.png);">
-        <div class="hero-section">
-            <div class="container text-center wow zoomIn">
-                <span class="display-4">PROVINCIAL YOUTH</span>
-                <h1 class="subhead">DEVELOPMENT COUNCIL</h1>
-            </div>
-        </div>
+    
+    <div class="page-hero bg-image overlay-dark" style="background-image: url(../dash/assets/img/goydd4.png);">
+    <x-app-layout></x-app-layout>
     </div>
 
 
     <div class="bg-light">
-        <div class="page-section py-3 mt-md-n5 custom-index">
-            <div class="container">
+        <div class="page-section py-5 mt-md-n5 custom-index" style="background-color: #000a00" >
+            <div class="container" >
                 <div class="row justify-content-center">
-                    <div class="col-md-4 py-3 py-md-0">
+                    <div class="col-md-3 py-2 py-md-0">
                         <div class="card-service wow fadeInUp">
                             <div class="circle-shape bg-secondary text-white">
                                 <span class="mai-chatbubbles-outline"></span>
@@ -126,7 +121,7 @@
                             <p>Discover Announcement</p>
                         </div>
                     </div>
-                    <div class="col-md-4 py-3 py-md-0">
+                    <div class="col-md-3 py-2 py-md-0">
                         <div class="card-service wow fadeInUp">
                             <div class="circle-shape bg-primary text-white">
                                 <span class="mai-shield-checkmark"></span>
@@ -134,7 +129,7 @@
                             <p>View Events</p>
                         </div>
                     </div>
-                    <div class="col-md-4 py-3 py-md-0">
+                    <div class="col-md-3 py-2 py-md-0">
                         <div class="card-service wow fadeInUp">
                             <div class="circle-shape bg-accent text-white">
                                 <span class="mai-basket"></span>
@@ -142,6 +137,17 @@
                             <p>Register for Youth Profiling</p>
                         </div>
                     </div>
+                    <div class="col-md-3 py-2 py-md-0">
+                        <div class="card-service wow fadeInUp">
+                            <div class="circle-shape bg-accent text-white">
+                                <span class="mai-basket"></span>
+                            </div>
+                            <p>Register for Youth Organization</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+         
                 </div>
             </div>
         </div> <!-- .page-section -->
@@ -164,9 +170,9 @@
                             future for themselves and their communities.
                         </p>
                     </div>
-                    <div class="col-lg-6 wow fadeInRight" data-wow-delay="400ms">
-                        <div class="img-place custom-img-1 rounded-circle">
-                            <img src="pydc.png" alt="">
+                    <div class="col-lg-0 wow fadeInRight" data-wow-delay="400ms">
+                        <div class="img-place custom-img-1" style="margin-left: -40px">
+                            <img src="youth3.png" alt="">
                         </div>
                     </div>
                 </div>

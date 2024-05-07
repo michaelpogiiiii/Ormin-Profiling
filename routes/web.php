@@ -42,6 +42,7 @@ use App\Http\Controllers\VictoriaAdminController;
 use App\Http\Controllers\pendingregistration;
 use App\Http\Controllers\approved;
 use App\Http\Controllers\ExpiredController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -71,6 +72,8 @@ Route::middleware([
 //Super Admin
 Route::group(['middleware' => 'superadmin'], function () {
     Route::get('/adminprofile', [AdminController::class, 'adminProfile']);
+    Route::get('/disapproved', [AdminController::class, 'disApproved']);
+    Route::get('/waitlist', [AdminController::class, 'Waitlist']);
     Route::get('/approved', [AdminController::class, 'Approved']);
     Route::get('/expired', [AdminController ::class, 'Expired']);
     Route::get('/municipality-users', [AdminController::class, 'municipalityUser']);
@@ -96,6 +99,7 @@ Route::group(['middleware' => 'superadmin'], function () {
 
 $disapproved = ['reason' => 'Not Valid'];
 $var = compact('disapproved');
+
 
 //Users
 

@@ -24,6 +24,29 @@
        
         </li>
         <li>
+            <a  href="javascript:;"  class="side-menu">
+                <div class="side-menu__icon"> <i data-lucide="user-minus"></i> </div>
+                <div class="side-menu__title"> Pending Org. List </div>
+
+                <div class="side-menu__sub-icon "> <i data-lucide="chevron-down"></i> </div>
+            </a>
+            <ul class="">
+                <li>
+                    <a href="{{ url('disapproved') }}" class="side-menu">
+                        <div class="side-menu__icon"> <i data-lucide="thumbs-down"></i> </div>
+                        <div class="side-menu__title"> Disapproved </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="{{ url('waitlist') }}" class="side-menu">
+                        <div class="side-menu__icon"> <i data-lucide="clock"></i> </div>
+                        <div class="side-menu__title"> Waitlist </div>
+                    </a>
+                </li>
+            </ul>
+       
+        </li>
+        <li>
             <a  href="{{ url('approved') }}" class="side-menu">
                 <div class="side-menu__icon"> <i data-lucide="thumbs-up"></i> </div>
                 <div class="side-menu__title"> Approved Org. List </div>

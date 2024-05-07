@@ -223,7 +223,7 @@
                         @foreach($showEvents as $data)
                             <div class="item" style="height: 450px;position: relative;">
                                 <img class="" src="eventimage/{{$data->photo}}" alt="">
-                                <p class="text-center text-uppercase p-3" style="font-family: 'Public Sans', sans-serif;, cursive;font-size:20px;font-weight:bolder;">{{$data->name}}</p>
+                                <p class="text-center1 text-uppercase p-3" style="font-family: 'Public Sans', sans-serif;, cursive;font-size:20px;font-weight:bolder;">{{$data->name}}</p>
                                 <p class="mt-4" style="font-family: 'Public Sans', sans-serif;, cursive;font-size:15px"><?php echo date('M d, Y', strtotime($data->date)); ?></p>
                                 <p class="mt-1" style="font-family: 'Public Sans', sans-serif;, cursive;font-size:15px">{{$data->location}}</p>
                                 <a style="position: absolute; bottom:10px; right:10px;" href="{{url('delete-bansud-event', $data->id)}}" onclick="return confirm('Delete event?')"><i class="fa fa-trash mt-3 text-danger" style="font-size: 30px"></i></a>

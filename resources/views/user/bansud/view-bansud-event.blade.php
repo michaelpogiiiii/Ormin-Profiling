@@ -9,7 +9,7 @@
 
     <meta name="copyright" content="MACode ID, https://macodeid.com/">
 
-    <title>PYDC</title>
+    <title>GO-YDD</title>
 
     <link rel="stylesheet" href="../dash/assets/css/maicons.css">
 
@@ -76,7 +76,7 @@
 
         <nav class="navbar navbar-expand-lg navbar-light shadow-sm">
             <div class="container">
-                <a class="navbar-brand" href="#"><span class="text-primary">PY</span>DC</a>
+                <a class="navbar-brand" href="#"><span class="text-primary">GO-YDD</a>
 
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupport"
                     aria-controls="navbarSupport" aria-expanded="false" aria-label="Toggle navigation">
@@ -113,12 +113,12 @@
         </nav>
     </header>
     @foreach ($event as $data)
-        <div class="row container-fluid m-auto" style="background-color: rgb(192, 226, 226)">
+        <div class="row container-fluid m-auto" style="background-color: #001400">
             <div class="page-hero bg-image overlay-light col-sm-6 wow fadeInLeft"
                 style="background-image: url(/eventimage/{{ $data->photo }});">
             </div>
             <div class="page-hero bg-image overlay-light col-sm-6 text-center wow fadeInRight p-2"
-                style="background-image: url(/eventimage/eventbg.jpg">
+                style="background-color: green; border: solid white">
                 <h1 style="font-family: cursive, sans-serif;;font-weight:800; font-size:50px"> {{ $data->name }} </h1>
                 <p class="mt-3" style="font-family: 'Alegreya Sans SC', sans-serif; font-size:25px;">
                     {{ $data->about }} </p>

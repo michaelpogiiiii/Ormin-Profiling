@@ -78,6 +78,18 @@ use App\Models\VictoriaMonReport;
 class AdminController extends Controller
 {
     // Show All profiles
+    public function Waitlist(Request $request)
+    {
+        $currentDate = Carbon::now('Asia/Manila')->toDateString();
+        $allProfiles = new Collection();
+         return view('pydc.waitlist');
+    }
+    public function disApproved(Request $request)
+    {
+        $currentDate = Carbon::now('Asia/Manila')->toDateString();
+        $allProfiles = new Collection();
+         return view('pydc.disapproved');
+    }
     public function Approved(Request $request)
     {
         $currentDate = Carbon::now('Asia/Manila')->toDateString();

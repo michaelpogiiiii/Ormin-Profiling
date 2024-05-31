@@ -40,6 +40,7 @@
         href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <style>
+    
         .owl-carousel .item {
             margin: 10px auto;
             width: 100%;
@@ -111,7 +112,7 @@
                 <!-- BEGIN: Breadcrumb -->
                 <nav aria-label="breadcrumb" class="-intro-x mr-auto hidden sm:flex">
                     <ol class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="#">Super Admin</a></li>
+                        <li class="breadcrumb-item"><a href="#">Provincial Admin</a></li>
                         <li class="breadcrumb-item active" aria-current="page">Dashboard</li>
                     </ol>
                 </nav>
@@ -121,7 +122,7 @@
             <!-- END: Top Bar -->
             {{-- Message --}}
             <div class="mt-3">
-                <h1 class="text-center" style="font-family: 'Abel', sans-serif;font-size:60px;">All Events</h1>
+                <h1 class="text-center2" style="font-family: 'Abel', sans-serif;font-size:60px;">All Events</h1>
             </div>
             @if (session()->has('error'))
                 <div class="alert alert-danger mt-3">
@@ -152,7 +153,7 @@
                 <button class="btn btn-outline-success mt-1" hidden>Search</button>
             </form>
             @if ($past_event->isEmpty())
-                <div class="mt-5 text-center">No events available.</div>
+                <div class="mt-5 text-center-small">No events available.</div>
             @else
                 <div class="mt-5 owl-carousel p-2">
                     @foreach ($past_event as $data)

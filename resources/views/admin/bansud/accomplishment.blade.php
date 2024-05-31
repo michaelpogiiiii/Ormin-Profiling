@@ -5,7 +5,7 @@
 
 <head>
     <meta charset="utf-8">
-    <link href="admin/dist/images/logo.svg" rel="shortcut icon">
+    <link href="user/images/goyddbgfinalogo.png" rel="shortcut icon">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description"
         content="Tinker admin is super flexible, powerful, clean & modern responsive tailwind admin template with unlimited possibilities.">
@@ -212,6 +212,7 @@
                         <li class="breadcrumb-item active" aria-current="page">Accomplishment Report</li>
                     </ol>
                 </nav>
+                <x-app-layout></x-app-layout>
                 <!-- END: Breadcrumb -->
             </div>
             <!-- END: Top Bar -->
@@ -219,11 +220,12 @@
                 @include('admin.bansud.add-acc')
                 <div class="mt-3 d-flex justify-content-between">
                     <h3 style="font-size:30px;font-weight:700;">Accomplishment Report</h3>
-                    <form action="{{ url('bansud-accomplishment-report') }}" type="GET">
-                        <input type="search" name="file" placeholder="Search File" autocomplete="off"
-                            class="rounded" style="color:rgb(80, 91, 91);" oninput="delayedSubmit(this)">
-                        <button class="btn btn-success mt-1"><i class="fa fa-search"></i></button>
-                    </form>
+                <form action="{{ url('bansud-accomplishment-report') }}" type="GET" class="search-form">
+                    <div class="search-container">
+                    <input type="search" name="file" placeholder="Search File" autocomplete="off" class="rounded search-input" style="color:rgb(80, 91, 91);" oninput="delayedSubmit(this)">
+                    <button type="submit" class="search-button"><i class="fa fa-search"></i></button>
+                    </div>
+                </form>
                 </div>
 
                 {{-- Message --}}
@@ -241,7 +243,7 @@
                 @endif
 
                 @if ($data->isEmpty())
-                    <div class="text-center mt-5">
+                    <div class="text-center2 mt-5">
                         No report available.
                     </div>
                 @else

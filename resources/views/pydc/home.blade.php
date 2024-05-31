@@ -58,9 +58,7 @@
         .container-ind {
             width: 50%;
         }
-
-
-
+        
         .container-ind>div {
             border-radius: 10px;
             box-sizing: border-box;
@@ -163,7 +161,7 @@
                 <!-- BEGIN: Breadcrumb -->
                 <nav aria-label="breadcrumb" class="-intro-x mr-auto hidden sm:flex">
                     <ol class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="#">Super Admin</a></li>
+                        <li class="breadcrumb-item"><a href="#">Provincial Admin</a></li>
                         <li class="breadcrumb-item active" aria-current="page">Dashboard</li>
                     </ol>
                 </nav>
@@ -176,10 +174,14 @@
                 <div class="container-all ">
                     <div class="act-profile" style="position:relative;background-color: #fff;box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.25);">
                         <div style="display: flex; justify-content:start;height:70px">
-                            <p class="text-muted">All Profiles <br><span>(Active)</span></p>
+                            <p class="text-muted">Youth Profiles <br><span>(Active)</span></p>
                             <p
                                 style="border-radius:10px;position:absolute;top:0;right:0;">
-                                <i class="fa fa-user p-3" style="font-size:25px;width:70px;color:rgb(10, 159, 5);"></i>
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512" style="font-size:25px;width:30px;margin-top:20px; margin-right:15px; color:rgb(10, 159, 5);">
+                                     <!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc. -->
+                                    <path fill="#0a9f05" d="M96 128a128 128 0 1 1 256 0A128 128 0 1 1 96 128zM0 482.3C0 383.8 79.8 304 178.3 304h91.4C368.2 304 448 383.8 448 482.3c0 16.4-13.3 29.7-29.7 29.7H29.7C13.3 512 0 498.7 0 482.3zM625 177L497 305c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L591 143c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"/>
+                                </svg>
+
                             </p>
                         </div>
                         <p class="p-4" style="font-family: 'Abel', sans-serif;font-size:35px;">
@@ -190,7 +192,71 @@
 
                     <div class="inc-profile" style="position:relative;background-color: #fff;box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.25);">
                         <div style="display: flex; justify-content:start; width:95%; margin:auto;height:70px">
-                            <p class="text-muted">All Profiles <br><span>(Inactive)</span></p>
+                            <p class="text-muted">Youth Profiles <br><span>(Inactive)</span></p>
+                            <p
+                                style="border-radius:10px;position:absolute;top:0;right:0;">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512" style="font-size:25px;width:30px;margin-top:20px; margin-right:15px; color:rgb(10, 159, 5);">
+                                <!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                                <path fill="#0a9f05" d="M96 128a128 128 0 1 1 256 0A128 128 0 1 1 96 128zM0 482.3C0 383.8 79.8 304 178.3 304h91.4C368.2 304 448 383.8 448 482.3c0 16.4-13.3 29.7-29.7 29.7H29.7C13.3 512 0 498.7 0 482.3zM472 200H616c13.3 0 24 10.7 24 24s-10.7 24-24 24H472c-13.3 0-24-10.7-24-24s10.7-24 24-24z"/>
+                                </svg>
+
+
+                            </p>
+                        </div>
+                        <p class="p-4" style="font-family: 'Abel', sans-serif;font-size:35px;">
+                            {{ $inactive_profiles }}
+                        </p>
+                        <button class="btn btn-success" id="incBtn">View</button>
+                    </div>
+
+                    <div class="inc-profile" style="position:relative;background-color: #fff;box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.25);">
+                        <div style="display: flex; justify-content:start; width:95%; margin:auto;height:70px">
+                            <p class="text-muted">Youth Org. <br><span>(Disapproved)</span></p>
+                            <p
+                                style="border-radius:20px;position:absolute;top:0;right:0;">
+                                <i class="fa fa-thumbs-down p-3"
+                                    style="font-size:25px;width:70px;color:rgb(10, 159, 5);"></i>
+                            </p>
+                        </div>
+                        <p class="p-4" style="font-family: 'Abel', sans-serif;font-size:35px;">
+                            {{ $inactive_profiles }}
+                        </p>
+                        <button class="btn btn-success" id="incBtn">View</button>
+                    </div>
+
+                    <div class="inc-profile" style="position:relative;background-color: #fff;box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.25);">
+                        <div style="display: flex; justify-content:start; width:95%; margin:auto;height:70px">
+                            <p class="text-muted">Youth Org. <br><span>(Approved)</span></p>
+                            <p
+                                style="border-radius:20px;position:absolute;top:0;right:0;">
+                                <i class=" fa fa-thumbs-up  p-3"
+                                    style="font-size:25px;width:70px;color:rgb(10, 159, 5);"></i>
+                            </p>
+                        </div>
+                        <p class="p-4" style="font-family: 'Abel', sans-serif;font-size:35px;">
+                            {{ $inactive_profiles }}
+                        </p>
+                        <button class="btn btn-success" id="incBtn">View</button>
+                    </div>
+
+                    <div class="inc-profile" style="position:relative;background-color: #fff;box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.25);">
+                        <div style="display: flex; justify-content:start; width:95%; margin:auto;height:70px">
+                            <p class="text-muted">Youth Org. <br><span>(Waitlist)</span></p>
+                            <p
+                                style="border-radius:20px;position:absolute;top:0;right:0;">
+                                <i class="fa fa-clock-o p-3"
+                                    style="font-size:25px;width:70px;color:rgb(10, 159, 5);"></i>
+                            </p>
+                        </div>
+                        <p class="p-4" style="font-family: 'Abel', sans-serif;font-size:35px;">
+                            {{ $inactive_profiles }}
+                        </p>
+                        <button class="btn btn-success" id="incBtn">View</button>
+                    </div>
+
+                    <div class="inc-profile" style="position:relative;background-color: #fff;box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.25);">
+                        <div style="display: flex; justify-content:start; width:95%; margin:auto;height:70px">
+                            <p class="text-muted">Youth Org. <br><span>(Expired)</span></p>
                             <p
                                 style="border-radius:20px;position:absolute;top:0;right:0;">
                                 <i class="fa fa-user-times p-3"
@@ -205,7 +271,7 @@
 
                     <div class="up-event" style="position:relative;background-color: #fff;box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.25);">
                         <div style="display: flex; justify-content:start; width:95%; margin:auto;height:70px">
-                            <p class="text-muted">All Event <br><span>(Upcoming)</span></p>
+                            <p class="text-muted">Events <br><span>(Upcoming)</span></p>
                             <p
                                 style="border-radius:20px;position:absolute;top:0;right:0;">
                                 <i class="fa fa-calendar p-3"
@@ -217,9 +283,25 @@
                         <button class="btn btn-success" id="upBtn">View</button>
                     </div>
 
+                    <div class="up-event" style="position:relative;background-color: #fff;box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.25);">
+                        <div style="display: flex; justify-content:start; width:95%; margin:auto;height:70px">
+                            <p class="text-muted">Events <br><span>(Current)</span></p>
+                            <p
+                                style="border-radius:20px;position:absolute;top:0;right:0;">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" style="font-size:25px;width:30px;margin-top:20px; margin-right:15px; color:rgb(10, 159, 5);">
+                                <!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                                <path fill="rgb(10, 159, 5)" d="M128 0c13.3 0 24 10.7 24 24V64H296V24c0-13.3 10.7-24 24-24s24 10.7 24 24V64h40c35.3 0 64 28.7 64 64v16 48V448c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V192 144 128C0 92.7 28.7 64 64 64h40V24c0-13.3 10.7-24 24-24zM400 192H48V448c0 8.8 7.2 16 16 16H384c8.8 0 16-7.2 16-16V192zM329 297L217 409c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47 95-95c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"/>
+                                </svg>
+                            </p>
+                        </div>
+                        <p class="p-4" style="font-family: 'Abel', sans-serif;font-size:35px;"> {{ $incoming_event }}
+                        </p>
+                        <button class="btn btn-success" id="upBtn">View</button>
+                    </div>
+
                     <div class="pst-event" style="position:relative;background-color: #fff;box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.25);">
                         <div style="display: flex; justify-content:start; width:95%; margin:auto;height:70px">
-                            <p class="text-muted">All Event <br> <span>(Past)</span></p>
+                            <p class="text-muted">Events <br> <span>(Past)</span></p>
                             <p
                                 style="border-radius:20px;position:absolute;top:0;right:0;">
                                 <i class="fa fa-calendar-times-o p-3"
@@ -235,7 +317,7 @@
                         <div style="display: flex; justify-content:start; width:95%; margin:auto;height:70px">
                             <p class="text-muted">Accomp.  <br> <span>Report</span></p>
                             <p
-                                style=";border-radius:20px;position:absolute;top:0;right:0;">
+                                style="border-radius:20px;position:absolute;top:0;right:0;">
                                 <i class="fa fa-file-text-o p-3"
                                     style="font-size:25px;width:70px;color:rgb(10, 159, 5);"></i>
                             </p>
@@ -264,7 +346,7 @@
                 <div class="container-ind">
                     <div class="container-profile">
                         <div class="profile-active animate__animated animate__bounceInRight" style="display: none">
-                            <h1 class="text-center" style="font-family: 'Nunito', sans-serif; font-size: 40px;">Active
+                            <h1 class="text-center1" style="font-family: 'Nunito', sans-serif; font-size: 40px;">Active
                                 Profiles</h1>
                             <div style="display: flex; flex-wrap: wrap;">
                                 <ul class="p-3" style="font-family: 'Heebo', sans-serif; font-size: 25px;">
@@ -351,7 +433,7 @@
                             </div>
                         </div>
                         <div class="profile-inactive animate__animated animate__bounceInRight" style="display: none;">
-                            <h1 class="text-center" style="font-family: 'Nunito', sans-serif; font-size: 40px;">
+                            <h1 class="text-center1" style="font-family: 'Nunito', sans-serif; font-size: 40px;">
                                 Inactive Profiles</h1>
                             <div style="display: flex; flex-wrap: wrap;">
                                 <ul class="p-3" style="font-family: 'Heebo', sans-serif; font-size: 25px;">
@@ -438,7 +520,7 @@
                             </div>
                         </div>
                         <div class="upcoming-event animate__animated animate__bounceInRight" style="display: none;">
-                            <h1 class="text-center" style="font-family: 'Nunito', sans-serif; font-size: 40px;">
+                            <h1 class="text-center1" style="font-family: 'Nunito', sans-serif; font-size: 40px;">
                                 Upcoming Events</h1>
                             <div style="display: flex; flex-wrap: wrap;">
                                 <ul class="p-3" style="font-family: 'Heebo', sans-serif; font-size: 25px;">
@@ -526,7 +608,7 @@
                             </div>
                         </div>
                         <div class="past-event animate__animated animate__bounceInRight" style="display: none;">
-                            <h1 class="text-center" style="font-family: 'Nunito', sans-serif; font-size: 40px;">Past
+                            <h1 class="text-center1" style="font-family: 'Nunito', sans-serif; font-size: 40px;">Past
                                 Events</h1>
                             <div style="display: flex; flex-wrap: wrap;">
                                 <ul class="p-3" style="font-family: 'Heebo', sans-serif; font-size: 25px;">
@@ -614,7 +696,7 @@
                         </div>
 
                         <div class="acc-report animate__animated animate__bounceInRight" style="display: none;">
-                            <h1 class="text-center" style="font-family: 'Nunito', sans-serif; font-size: 40px;">
+                            <h1 class="text-center1" style="font-family: 'Nunito', sans-serif; font-size: 40px;">
                                 Accomplishment Report</h1>
                             <div style="display: flex; flex-wrap: wrap;">
                                 <ul class="p-3" style="font-family: 'Heebo', sans-serif; font-size: 25px;">
@@ -699,7 +781,7 @@
                             </div>
                         </div>
                         <div class="mon-report animate__animated animate__bounceInRight" style="display: none;">
-                            <h1 class="text-center" style="font-family: 'Nunito', sans-serif; font-size: 40px;">
+                            <h1 class="text-center1" style="font-family: 'Nunito', sans-serif; font-size: 40px;">
                                 Monitoring Report</h1>
                             <div style="display: flex; flex-wrap: wrap;">
                                 <ul class="p-3" style="font-family: 'Heebo', sans-serif; font-size: 25px;">

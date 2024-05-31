@@ -43,7 +43,11 @@ use App\Http\Controllers\pendingregistration;
 use App\Http\Controllers\approved;
 use App\Http\Controllers\ExpiredController;
 
+
+
+
 /*
+
 |--------------------------------------------------------------------------
 | Web Routes
 |--------------------------------------------------------------------------
@@ -75,6 +79,11 @@ Route::group(['middleware' => 'superadmin'], function () {
     Route::get('/disapproved', [AdminController::class, 'disApproved']);
     Route::get('/waitlist', [AdminController::class, 'Waitlist']);
     Route::get('/approved', [AdminController::class, 'Approved']);
+
+    Route::get('/addorg', [AdminController::class, 'create']);
+    Route::post('/addorg1', [AdminController::class, 'store']);
+    Route::get('/view-org/{id}', [AdminController::class, 'viewOrg']);
+
     Route::get('/expired', [AdminController ::class, 'Expired']);
     Route::get('/municipality-users', [AdminController::class, 'municipalityUser']);
     Route::post('/user-profile', [AdminController::class, 'userProfile']);
@@ -231,10 +240,16 @@ Route::group(['middleware' => 'bansudadmin'], function () {
     Route::get('/download-bansud-mon/{id}/{municipality}', [BansudAdminController::class, 'downloadBansudMon']);
     Route::get('/delete-bansud-mon/{id}/{municipality}', [BansudAdminController::class, 'deleteBansudMon']);
    //new modules
+
+    Route::get('/bansud-todays-event', [BansudAdminController::class, 'bansudTdsEvent']);
     Route::get('/bansud_disapproved', [BansudAdminController ::class, 'bansudDisapproved']);
     Route::get('/bansud_waitlist', [BansudAdminController ::class, 'bansudWaitList']);
     Route::get('/bansud_approved', [BansudAdminController ::class, 'bansudApproved']);
     Route::get('/bansud_expired', [BansudAdminController ::class, 'bansudExpired']);
+
+    Route::get('/bansud_addorg', [BansudAdminController::class, 'bansud_create']);
+    Route::post('/bansud_addorg1', [BansudAdminController::class, 'bansud_store']);
+    Route::get('/bansud_view-org/{id}', [BansudAdminController::class, 'bansud_viewOrg']);
 });
 // Baco
 Route::group(['middleware' => 'bacoadmin'], function () {

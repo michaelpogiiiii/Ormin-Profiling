@@ -12,7 +12,7 @@
     <meta name="keywords"
         content="admin template, Tinker Admin Template, dashboard template, flat admin template, responsive admin template, web app">
     <meta name="author" content="LEFT4CODE">
-    <title> Approved Registration</title>
+    <title> Waitlist </title>
     <!-- BEGIN: CSS Assets-->
     <!-- CSS -->
     <!-- CSS -->
@@ -31,6 +31,10 @@
         table {
             border-collapse: collapse;
             width: 100%;
+            border-radius: 15px; 
+            overflow: hidden; 
+            box-shadow: -6px -6px 10px #f9f9f9,
+                         6px 6px 10px #00000026;
         }
 
         th,
@@ -68,8 +72,8 @@
                 <!-- BEGIN: Breadcrumb -->
                 <nav aria-label="breadcrumb" class="-intro-x mr-auto hidden sm:flex">
                     <ol class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="#">Super Admin</a></li>
-                        <li class="breadcrumb-item active" aria-current="page"> Waitlist Org.</li>
+                        <li class="breadcrumb-item"><a href="#">Provincial Admin</a></li>
+                        <li class="breadcrumb-item active" aria-current="page"> Waitlist </li>
                     </ol>
                 </nav>
                 <x-app-layout></x-app-layout>
@@ -77,11 +81,12 @@
             </div>
             <!-- END: Top Bar -->
             <div class="body-top mt-2" style="display: flex; justify-content:space-between;">
-                <form action="{{ url('approved') }}" type="GET">
-                    <input type="search" name="users" placeholder="Search Profile" autocomplete="off" class="rounded"
-                        style="color:rgb(80, 91, 91);">
-                    <button class="btn btn-success mt-1"><i class="fa fa-search"></i></button>
-                </form>
+            <form action="{{ url('waitlist') }}" type="GET" class="search-form">
+                <div class="search-container">
+                <input type="search" name="users" placeholder="Search Profile" autocomplete="off" class="rounded search-input" style="color:rgb(80, 91, 91);">
+                <button type="submit" class="search-button"><i class="fa fa-search"></i></button>
+                </div>
+            </form>
                 <button onclick="printTable()" class="btn btn-success"> <i class="fa fa-print text-dark"
                         style="font-size: 40px"></i> </button>
                 </div>
@@ -90,10 +95,10 @@
                 <tbody>
                 <thead>
                     <tr>
-                        <th>URN</th>
-                        <th>Organization Name</th>
-                        <th>Date Approved</th>
+                        <th>Org. Name</th>
+                        <th>File Status</th>
                         <th>Status</th>
+                        <th>Reg. Date</th>
                         <th class="action-column">Action</th>
                     </tr>
                 </thead>

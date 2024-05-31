@@ -5,7 +5,7 @@
 
 <head>
     <meta charset="utf-8">
-    <link href="admin/dist/images/logo.svg" rel="shortcut icon">
+    <link href="user/images/goyddbgfinalogo.png" rel="shortcut icon">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description"
         content="Tinker admin is super flexible, powerful, clean & modern responsive tailwind admin template with unlimited possibilities.">
@@ -34,23 +34,47 @@
         table {
             border-collapse: collapse;
             width: 100%;
+            border-radius: 15px; 
+            overflow: hidden; 
+             overflow: hidden;
+            box-shadow: -6px -6px 10px #f9f9f9,
+                         6px 6px 10px #00000026;
         }
 
         th,
         td {
-            border: 1px solid black;
+            border: 1px gray;
             text-align: left;
             padding: 8px;
             text-align: center;
+            background-color: white;
         }
 
         th {
-            background-color: #4CAF50;
+            background-color: green;
             color: white;
         }
 
         tr:nth-child(even) {
             background-color: #f2f2f2;
+        }
+        .btn{
+            background-color: #efefef;
+            border: none;
+            border-radius: 25px;
+            color: #424242;
+            box-shadow: -6px -6px 10px #f9f9f9,
+                         6px 6px 10px #00000026;
+        }
+        .btn1 {
+            margin-left: 500px;
+            background-color: #efefef;
+            border: none;
+            border-radius: 25px;
+            color: #424242;
+            box-shadow: -6px -6px 10px #f9f9f9,
+                         6px 6px 10px #00000026;
+            font-size: 16px;
         }
     </style>
 </head>
@@ -74,15 +98,20 @@
                         <li class="breadcrumb-item active" aria-current="page">Registered Profiles</li>
                     </ol>
                 </nav>
+                <x-app-layout></x-app-layout>
                 <!-- END: Breadcrumb -->
             </div>
-
-            <form action="{{ url('bansudprofile') }}" type="GET">
-                <input type="search" name="users" placeholder="Search Profile" autocomplete="off" class="rounded"
-                    style="color:rgb(80, 91, 91);" oninput="delayedSubmit(this)">
-                <button class="btn btn-success mt-1"><i class="fa fa-search"></i></button>
+            <div class="body-top mt-2" style="display: flex; justify-content:space-between;">
+            <form action="{{ url('bansudprofile') }}" type="GET" class="search-form">
+                <div class="search-container">
+                <input type="search" name="users" placeholder="Search Profile" autocomplete="off" class="rounded search-input" style="color:rgb(80, 91, 91);">
+                <button type="submit" class="search-button"><i class="fa fa-search"></i></button>
+                </div>
+                </div> 
             </form>
+        
             <!-- END: Top Bar -->
+           
             <div class="mt-3">
                 <a href="{{ url('bansud-inactive') }}" class="btn btn-danger">View Inactive Profiles</a>
             </div>
@@ -98,12 +127,7 @@
 
             @if ($filteredProfiles->isEmpty())
                 <table class="mt-5" id="responsive-table">
-                    <tr>
-                        <td colspan="7">No data available</td>
-                    </tr>
-                </table>
-            @else
-                <table class="mt-5" id="responsive-table">
+             
                     <tr>
                         <th>Full Name</th>
                         <th>Age</th>
@@ -113,6 +137,12 @@
                         <th>Barangay</th>
                         <th>Action</th>
                     </tr>
+                    <tr>
+                        <td colspan="7">No data available</td>
+                    </tr>
+                </table>
+            @else
+              
                     @foreach ($filteredProfiles as $data)
                         @php
                             $birthdate = Carbon::parse($data->bday);

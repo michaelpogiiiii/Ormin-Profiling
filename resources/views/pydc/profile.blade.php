@@ -38,6 +38,9 @@
             overflow: hidden;
             box-shadow: -6px -6px 10px #f9f9f9,
                          6px 6px 10px #00000026;
+                         
+            border-radius: 15px; 
+            overflow: hidden; 
         }
 
         th,
@@ -100,7 +103,7 @@
                 <!-- BEGIN: Breadcrumb -->
                 <nav aria-label="breadcrumb" class="-intro-x mr-auto hidden sm:flex">
                     <ol class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="#">Super Admin</a></li>
+                        <li class="breadcrumb-item"><a href="#">Provincial Admin</a></li>
                         <li class="breadcrumb-item active" aria-current="page">Registered Profiles > <span
                                 class="text-success">Active</span></li>
                     </ol>
@@ -110,11 +113,12 @@
             </div>
             <!-- END: Top Bar -->
             <div class="body-top mt-2" style="display: flex; justify-content:space-between;">
-                <form action="{{ url('adminprofile') }}" type="GET">
-                    <input type="search" name="users" placeholder="Search Profile" autocomplete="off" class="rounded"
-                        style="color:rgb(80, 91, 91);">
-                    <button class="btn btn-success mt-1"><i class="fa fa-search"></i></button>
-                </form>
+            <form action="{{ url('adminprofile') }}" type="GET" class="search-form">
+                <div class="search-container">
+                <input type="search" name="users" placeholder="Search Profile" autocomplete="off" class="rounded search-input" style="color:rgb(80, 91, 91);">
+                <button type="submit" class="search-button"><i class="fa fa-search"></i></button>
+                </div>
+            </form>
 
                 <form action="{{ url('adminprofile') }}" type="GET" id="searchForm">
                     <select name="municipal" id="municipal" class="border-success rounded">

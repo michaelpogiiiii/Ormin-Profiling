@@ -32,6 +32,10 @@
         table {
             border-collapse: collapse;
             width: 100%;
+            border-radius: 15px; 
+            overflow: hidden; 
+            box-shadow: -6px -6px 10px #f9f9f9,
+                         6px 6px 10px #00000026;
         }
 
         th,
@@ -67,7 +71,7 @@
                 <!-- BEGIN: Breadcrumb -->
                 <nav aria-label="breadcrumb" class="-intro-x mr-auto hidden sm:flex">
                     <ol class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="#">Super Admin</a></li>
+                        <li class="breadcrumb-item"><a href="#">Provincial Admin</a></li>
                         <li class="breadcrumb-item active" aria-current="page"> Expired Organization List </li>
                     </ol>
                 </nav>
@@ -76,21 +80,23 @@
             </div>
             <!-- END: Top Bar -->
             <div class="body-top mt-2" style="display: flex; justify-content:space-between;">
-                <form action="{{ url('expired') }}" type="GET">
-                    <input type="search" name="users" placeholder="Search Profile" autocomplete="off" class="rounded"
-                        style="color:rgb(80, 91, 91);">
-                    <button class="btn btn-success mt-1"><i class="fa fa-search"></i></button>
-                </form>
+            <form action="{{ url('expired') }}" type="GET" class="search-form">
+                <div class="search-container">
+                <input type="search" name="users" placeholder="Search Profile" autocomplete="off" class="rounded search-input" style="color:rgb(80, 91, 91);">
+                <button type="submit" class="search-button"><i class="fa fa-search"></i></button>
+                </div>
+            </form>
                 <button onclick="printTable()" class="btn btn-success"> <i class="fa fa-print text-dark"
                         style="font-size: 40px"></i> </button>
                 </div>
-                <table class="table" id="tablePrint" style= "border: 2px grey solid; margin-top: 40px">
+                <table class="table" id="tablePrint" style= "border: 2px grey solid; margin-top: 40px;">
                 <tbody>
                 <thead>
                     <tr>
-                        <th>Registration Expired</th>
+                        <th>Reg. Expired</th>
                         <th>Organization Name</th>
                         <th>Date Approved</th>
+                        <th>Date Expired</th>
                         <th>No. of Members</th>
                         <th class="action-column">Action</th>
                     </tr>

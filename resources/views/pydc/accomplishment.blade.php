@@ -129,6 +129,8 @@
         table {
             border-collapse: collapse;
             width: 100%;
+            border-radius: 15px; 
+            overflow: hidden; 
         }
 
         th,
@@ -217,7 +219,7 @@
                 <!-- BEGIN: Breadcrumb -->
                 <nav aria-label="breadcrumb" class="-intro-x mr-auto hidden sm:flex">
                     <ol class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="/home">Super Admin</a></li>
+                        <li class="breadcrumb-item"><a href="/home">Provincial Admin</a></li>
                         <li class="breadcrumb-item active" aria-current="page">Accomplishment Report</li>
                     </ol>
                 </nav>
@@ -229,11 +231,7 @@
                 <div class="mt-3 d-flex justify-content-between">
                     <h3 style="font-size:30px;font-weight:700;">Accomplishment Report</h3>
                     <div>
-                        <form action="{{ url('accomplishment-report') }}" type="GET">
-                            <input type="search" name="file" placeholder="Search File" autocomplete="off"
-                                class="rounded" style="color:rgb(80, 91, 91);" oninput="delayedSubmit(this)">
-                            <button class="btn btn-success mt-1"><i class="fa fa-search"></i></button>
-                        </form>
+                    
                         <form action="{{ url('accomplishment-report') }}" type="GET" id="searchForm">
                             <select name="municipal" id="municipal" class="border-success rounded">
                                 <option>Select Municipality</option>

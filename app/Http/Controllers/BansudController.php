@@ -44,6 +44,7 @@ class BansudController extends Controller
         $data->assembly_attend = $request->assembly_attend;
         $data->assembly_noattend = $request->assembly_noattend;
         $data->save();
+        
         return redirect()->back()->with('message', 'Profile Successfully Saved!');
     }
 

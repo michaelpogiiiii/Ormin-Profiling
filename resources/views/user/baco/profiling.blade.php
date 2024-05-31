@@ -53,9 +53,10 @@
         }
 
         body {
-            background: url(../dash/assets/img/pydcbg.png) no-repeat;
-            background-size: contain;
+           
             position: relative;
+            
+            /*background-color: #030b07*/
         }
 
         body::before {
@@ -68,7 +69,13 @@
             width: 100%;
             height: calc(96%);
             /* Adjust the percentage value to account for the space at the top */
-            background-color: rgba(0, 0, 0, 0.7);
+            background: url(../dash/assets/img/reg1.png) no-repeat;
+            background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-attachment: fixed;
+                filter: blur(2px); /* Adjust the blur intensity */
+                z-index: -1;
         }
     </style>
 </head>
@@ -82,7 +89,7 @@
 
         <nav class="navbar navbar-expand-lg navbar-light shadow-sm">
             <div class="container">
-                <a class="navbar-brand" href="#"><span class="text-primary">PY</span>DC</a>
+                <a class="navbar-brand" href="home"><span class="text-primary"> GO-YDD REGISTRATION FORM</a>
 
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupport"
                     aria-controls="navbarSupport" aria-expanded="false" aria-label="Toggle navigation">
@@ -130,7 +137,7 @@
     <div class="page-section" id="profiling">
         <div class="container">
             <h1 class="text-center wow fadeInUp text-uppercase"
-                style="font-family: cursive;font-size:40px; color:white;">Youth Profiling</h1>
+                style="font-family: San Serif;font-size:40px; color:white; margin-top:-50px;">Youth Profiling</h1>
 
             <form action="{{ url('baco-profile-save') }}" method="POST">
                 @csrf

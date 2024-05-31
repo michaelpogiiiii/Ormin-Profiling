@@ -6,6 +6,8 @@ use App\Models\BansudProfiles;
 use App\Models\BansudEvent;
 use App\Models\BansudAccReport;
 use App\Models\BansudMonReport;
+use App\Models\BansudAddOrganization;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 
 use Illuminate\Support\Facades\DB;
@@ -27,7 +29,6 @@ class BansudAdminController extends Controller
             });
         }
 
-
         $bansud_profiles = $bansud_profiles->paginate(10);
         $bansud_profiles->appends(['users' => $search]); // Add search query to pagination links
 
@@ -43,10 +44,52 @@ class BansudAdminController extends Controller
         
         return view('admin.bansud.waitlist');
     }
-    public function bansudApproved(Request $request)
+    public function bansud_create(Request $request)
     {
+        
+         return view('admin.bansud.add-org');
+    }
+    public function bansud_store(Request $request)
+    {
+        $data = new BansudAddOrganization( );  
+        $data->id;
+        $data->urn = $request->urn;
+        $data->organization_name = $request->organization_name;
+        $data->complete_address = $request->complete_address;
+        $data->telephone_number = $request->telephone_number;
+        $data->cellphone_number = $request->cellphone_number;
+        $data->number_members = $request->number_members;
+        $data->date_establish = $request->date_establish;
+        $data->date_approved = $request->date_approved;
+        $data->major_classification = $request->major_classification;
+        $data->sub_classification = $request->sub_classification;
+        $data->pydp_center = $request->pydp_center;
+        $data->email_add = $request->email_add;
+        $data->brief_description = $request->brief_description;
+        $data->head_name = $request->head_name;
+        $data->adviser_name = $request->adviser_name;
+        $data->contact_number = $request->contact_number;
+        $data->email_address = $request->email_address;
+        $data->registration_file = $request->registration_file;
+        $data->list_of_members_file = $request->list_of_members_file;
+        $data->directory_file = $request->directory_file;
+        $data->constitution_file = $request->constitution_file;
+        $data->save();
+       
+       return redirect()->back()->with('message', 'Profile Successfully Saved!');
+       
+    }
    
-         return view('admin.bansud.approved');
+    function bansudApproved(Request $request)
+    {
+        $bansapproved = BansudAddOrganization::all();
+         return view('admin.bansud.approved', compact('bansapproved'));
+    }
+    public function bansud_viewOrg(Request $request, $id)
+    {
+        $bansapproved = BansudAddOrganization::all();
+        $bansapproved = BansudAddOrganization::where('id', $id)->get();
+         return view('admin.bansud.banview-org', compact('bansapproved'));
     }
     public function bansudExpired(Request $request)
     {
@@ -96,6 +139,12 @@ class BansudAdminController extends Controller
     {
         $event = BansudEvent::all();
         return view('admin.bansud.pst-event', compact('event'));
+    }
+    public function bansudTdsEvent()
+    {
+        $event = BansudEvent::all();
+        
+        return view('admin.bansud.todaysevent', compact('event'));
     }
 
     public function bansudInactive(Request $request)

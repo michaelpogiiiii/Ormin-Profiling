@@ -88,7 +88,7 @@
                 <!-- BEGIN: Breadcrumb -->
                 <nav aria-label="breadcrumb" class="-intro-x mr-auto hidden sm:flex">
                     <ol class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="#">Super Admin</a></li>
+                        <li class="breadcrumb-item"><a href="#">Provincial Admin</a></li>
                         <li class="breadcrumb-item active" aria-current="page">Profile > <span
                                 style="color:blue;">Info</span></li>
                     </ol>

@@ -29,7 +29,7 @@
 
             
 
-            <button class="btn btn-success text-dark mt-2" type="submit" style="background-color:green; ">Add Avent</button>
+            <button class="btn btn-success text-dark mt-2" type="submit" style="background-color:green; ">Add Event</button>
         </form>
     </div>
 </div>

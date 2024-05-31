@@ -22,7 +22,7 @@
             <div>
                 <x-label for="municipality" value="{{ __('Municipality') }}" />
                 <select id="municipality" class="block mt-1 w-full" name="municipality" required autofocus autocomplete="municipality">
-                    
+                    <option value="Baco">Select Municipality</option>
                     <option value="Baco">Baco</option>
                     <option value="Bansud">Bansud</option>
                     <option value="Bongabong">Bongabong</option>

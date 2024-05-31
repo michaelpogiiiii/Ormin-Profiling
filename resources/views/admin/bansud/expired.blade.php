@@ -71,15 +71,16 @@
                         <li class="breadcrumb-item active" aria-current="page"> Expired Organization List </li>
                     </ol>
                 </nav>
-            
+                <x-app-layout></x-app-layout>
                 <!-- END: Breadcrumb -->
             </div>
             <!-- END: Top Bar -->
             <div class="body-top mt-2" style="display: flex; justify-content:space-between;">
-                <form action="{{ url('bansud_expired') }}" type="GET">
-                    <input type="search" name="users" placeholder="Search Profile" autocomplete="off" class="rounded"
-                        style="color:rgb(80, 91, 91);">
-                    <button class="btn btn-success mt-1"><i class="fa fa-search"></i></button>
+               <form action="{{ url('bansud-expired') }}" type="GET" class="search-form">
+                    <div class="search-container">
+                    <input type="search" name="users" placeholder="Search Organization" autocomplete="off" class="rounded search-input" style="color:rgb(80, 91, 91);" oninput="delayedSubmit(this)">
+                    <button type="submit" class="search-button"><i class="fa fa-search"></i></button>
+                    </div>
                 </form>
                 <button onclick="printTable()" class="btn btn-success"> <i class="fa fa-print text-dark"
                         style="font-size: 40px"></i> </button>
@@ -91,6 +92,7 @@
                         <th>Registration Expired</th>
                         <th>Organization Name</th>
                         <th>Date Approved</th>
+                        <th>Date Expired</th>
                         <th>No. of Members</th>
                         <th class="action-column">Action</th>
                     </tr>

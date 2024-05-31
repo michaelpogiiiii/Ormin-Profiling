@@ -2,7 +2,9 @@
 <nav class="side-nav">
     
     <ul>
-        <x-app-layout></x-app-layout>
+    <img class="w-52" style="margin-left: 70px" src="goyddbgfinalogo.png" alt="alternative">
+        <h1 style="font-size: 30px;font-family: sans-serif; color: white;margin-left: 60px;margin-bottom: 30px; margin-top: 15px;font-weigth: bolder">GO-YDD</h1>
+        
         <li>
             <a href="/home" class="side-menu side-menu">
                 <div class="side-menu__icon"> <i data-lucide="home"></i> </div>
@@ -18,41 +20,14 @@
                 <div class="side-menu__title"> Registered Profiles </div>
             </a>
         </li>
-        <li>
-            <a  href="javascript:;"  class="side-menu">
-                <div class="side-menu__icon"> <i data-lucide="user-minus"></i> </div>
-                <div class="side-menu__title"> Pending Org. List </div>
-
-                <div class="side-menu__sub-icon "> <i data-lucide="chevron-down"></i> </div>
-            </a>
-            <ul class="">
-                <li>
-                    <a href="{{ url('bansud_disapproved') }}" class="side-menu">
-                        <div class="side-menu__icon"> <i data-lucide="thumbs-down"></i> </div>
-                        <div class="side-menu__title"> Disapproved </div>
-                    </a>
-                </li>
-                <li>
-                    <a href="{{ url('bansud_waitlist') }}" class="side-menu">
-                        <div class="side-menu__icon"> <i data-lucide="clock"></i> </div>
-                        <div class="side-menu__title"> Waitlist </div>
-                    </a>
-                </li>
-            </ul>
        
-        </li>
         <li>
             <a  href="{{ url('bansud_approved') }}" class="side-menu">
-                <div class="side-menu__icon"> <i data-lucide="thumbs-up"></i> </div>
-                <div class="side-menu__title"> Approved Org. List </div>
+                <div class="side-menu__icon"> <i data-lucide="plus"></i> </div>
+                <div class="side-menu__title"> Add Organization</div>
             </a>
             </li>
-            <li>
-            <a  href="{{ url('bansud_expired') }}" class="side-menu">
-                <div class="side-menu__icon"> <i data-lucide="user-x"></i> </div>
-                <div class="side-menu__title"> Expired Org. List </div>
-            </a>
-            </li>
+       
         <li>
             <a href="javascript:;" class="side-menu">
                 <div class="side-menu__icon"> <i data-lucide="calendar"></i> </div>
@@ -66,6 +41,12 @@
                     <a href="{{url('bansud-past-event')}}" class="side-menu">
                         <div class="side-menu__icon"> <i data-lucide="activity"></i> </div>
                         <div class="side-menu__title"> Past Events </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="{{url('bansud-todays-event')}}" class="side-menu">
+                        <div class="side-menu__icon"> <i data-lucide="activity"></i> </div>
+                        <div class="side-menu__title"> Current Events </div>
                     </a>
                 </li>
                 <li>

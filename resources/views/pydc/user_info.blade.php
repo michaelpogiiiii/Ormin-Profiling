@@ -31,6 +31,10 @@
             border: 3px solid black;
             border-collapse: collapse;
             width: 100%;
+            border-radius: 15px; 
+            overflow: hidden; 
+            box-shadow: -6px -6px 10px #f9f9f9,
+                         6px 6px 10px #00000026;
         }
 
         th,
@@ -188,7 +192,7 @@
                 <!-- BEGIN: Breadcrumb -->
                 <nav aria-label="breadcrumb" class="-intro-x mr-auto hidden sm:flex">
                     <ol class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="#">Super Admin</a></li>
+                        <li class="breadcrumb-item"><a href="#">Provincial Admin</a></li>
                         <li class="breadcrumb-item active" aria-current="page">Users</li>
                     </ol>
                 </nav>

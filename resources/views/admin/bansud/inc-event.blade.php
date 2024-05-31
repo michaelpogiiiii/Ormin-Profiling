@@ -4,7 +4,7 @@
     <!-- BEGIN: Head -->
     <head>
         <meta charset="utf-8">
-        <link href="admin/dist/images/logo.svg" rel="shortcut icon">
+        <link href="user/images/goyddbgfinalogo.png" rel="shortcut icon">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="description" content="Tinker admin is super flexible, powerful, clean & modern responsive tailwind admin template with unlimited possibilities.">
         <meta name="keywords" content="admin template, Tinker Admin Template, dashboard template, flat admin template, responsive admin template, web app">
@@ -193,6 +193,7 @@
                             <li class="breadcrumb-item active" aria-current="page">Upcoming Event</li>
                         </ol>
                     </nav>
+                    <x-app-layout></x-app-layout>
                     <!-- END: Breadcrumb -->
                 </div>
                 <!-- END: Top Bar -->
@@ -208,19 +209,23 @@
                 @endif 
 
                 @php
-                    $showEvents = $event->filter(function($data) {
-                        $eventDate = strtotime($data->date);
-                        $currentDate = strtotime(date('Y-m-d'));
-                        $isPastDate = $eventDate < $currentDate;
-                        return !$isPastDate;
-                    });
+
+                use Carbon\Carbon;
+
+                // Today's date
+                $currentDate = Carbon::today();
+  
+               $upcomingEvents = $event->filter(function($event) use ($currentDate) {
+               $eventDate = Carbon::createFromFormat('Y-m-d', $event->date);
+                return $eventDate->gt($currentDate);
+             });
                 @endphp
 
-                @if($showEvents->isEmpty())
+                @if($upcomingEvents ->isEmpty())
                     <div class="mt-5 text-center">No upcoming events available.</div>
                 @else
                     <div class="mt-5 owl-carousel p-2">
-                        @foreach($showEvents as $data)
+                        @foreach($upcomingEvents  as $data)
                             <div class="item" style="height: 450px;position: relative;">
                                 <img class="" src="eventimage/{{$data->photo}}" alt="">
                                 <p class="text-center1 text-uppercase p-3" style="font-family: 'Public Sans', sans-serif;, cursive;font-size:20px;font-weight:bolder;">{{$data->name}}</p>

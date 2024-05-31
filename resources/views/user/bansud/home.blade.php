@@ -121,6 +121,7 @@
                             <p>Discover Announcement</p>
                         </div>
                     </div>
+                    <a href="{{ url('view-bansud-event/{id}') }}">
                     <div class="col-md-3 py-2 py-md-0">
                         <div class="card-service wow fadeInUp">
                             <div class="circle-shape bg-primary text-white">
@@ -129,6 +130,8 @@
                             <p>View Events</p>
                         </div>
                     </div>
+                </a>
+                    <a href="{{ url('BansudProfiling') }}" >
                     <div class="col-md-3 py-2 py-md-0">
                         <div class="card-service wow fadeInUp">
                             <div class="circle-shape bg-accent text-white">
@@ -137,13 +140,7 @@
                             <p>Register for Youth Profiling</p>
                         </div>
                     </div>
-                    <div class="col-md-3 py-2 py-md-0">
-                        <div class="card-service wow fadeInUp">
-                            <div class="circle-shape bg-accent text-white">
-                                <span class="mai-basket"></span>
-                            </div>
-                            <p>Register for Youth Organization</p>
-                        </div>
+                  </a>
                     </div>
                 </div>
             </div>

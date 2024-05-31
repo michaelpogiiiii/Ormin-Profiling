@@ -105,6 +105,7 @@
     </header>
 
     <div class="page-hero bg-image overlay-dark" style="background-image: url(../dash/assets/img/pydcbg.png);">
+    
         <div class="hero-section">
             <div class="container text-center wow zoomIn">
                 <span class="display-4">PROVINCIAL YOUTH</span>

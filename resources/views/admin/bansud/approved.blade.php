@@ -12,7 +12,7 @@
     <meta name="keywords"
         content="admin template, Tinker Admin Template, dashboard template, flat admin template, responsive admin template, web app">
     <meta name="author" content="LEFT4CODE">
-    <title> Approved Registration</title>
+    <title> Registration of Org.</title>
     <!-- BEGIN: CSS Assets-->
     <!-- CSS -->
     <!-- CSS -->
@@ -31,6 +31,11 @@
         table {
             border-collapse: collapse;
             width: 100%;
+            border-radius: 15px; 
+            overflow: hidden; 
+             overflow: hidden;
+            box-shadow: -6px -6px 10px #f9f9f9,
+                         6px 6px 10px #00000026;
         }
 
         th,
@@ -50,8 +55,24 @@
         tr:nth-child(even) {
             background-color: #f2f2f2;
         }
-        
-
+        .btn{
+            background-color: #efefef;
+            border: none;
+            border-radius: 25px;
+            color: #424242;
+            box-shadow: -6px -6px 10px #f9f9f9,
+                         6px 6px 10px #00000026;
+        }
+        .btn1 {
+            margin-left: 500px;
+            background-color: #efefef;
+            border: none;
+            border-radius: 25px;
+            color: #424242;
+            box-shadow: -6px -6px 10px #f9f9f9,
+                         6px 6px 10px #00000026;
+            font-size: 16px;
+        }
     </style>
 
 <body class="py-5 md:py-0 bg-black/[0.15] dark:bg-transparent">
@@ -69,41 +90,67 @@
                 <nav aria-label="breadcrumb" class="-intro-x mr-auto hidden sm:flex">
                     <ol class="breadcrumb">
                         <li class="breadcrumb-item"><a href="#">Bansud Admin</a></li>
-                        <li class="breadcrumb-item active" aria-current="page"> Approved Registration</li>
+                        <li class="breadcrumb-item active" aria-current="page"> Approved Organization List </li>
                     </ol>
                 </nav>
-              
+                <x-app-layout></x-app-layout>
                 <!-- END: Breadcrumb -->
             </div>
             <!-- END: Top Bar -->
             <div class="body-top mt-2" style="display: flex; justify-content:space-between;">
-                <form action="{{ url('bansud_approved') }}" type="GET">
-                    <input type="search" name="users" placeholder="Search Profile" autocomplete="off" class="rounded"
-                        style="color:rgb(80, 91, 91);">
-                    <button class="btn btn-success mt-1"><i class="fa fa-search"></i></button>
-                </form>
+            <form action="{{ url('approved') }}" type="GET" class="search-form">
+                <div class="search-container">
+                <input type="search" name="users" placeholder="Search Profile" autocomplete="off" class="rounded search-input" style="color:rgb(80, 91, 91);">
+                <button type="submit" class="search-button"><i class="fa fa-search"></i></button>
+            </div>
+            </form>
+                <div style="display: flex; justify-content:space-between;" class="mt-3">
+                <a href="{{ url('bansud_addorg') }}" class="btn1 btn-danger p-3">Registration Form</a>
+                </div>
                 <button onclick="printTable()" class="btn btn-success"> <i class="fa fa-print text-dark"
                         style="font-size: 40px"></i> </button>
                 </div>
-                        
-                <table class="table" id="tablePrint" style= "border: 2px grey solid; margin-top: 40px;">
+               
+                <table class="table" id="tablePrint" style= "border: 2px grey solid; margin-top: 40px">
                 <tbody>
                 <thead>
-                    <tr>
+                <tr>
                         <th>URN</th>
-                        <th>Organization Name</th>
+                        <th>Name</th>
                         <th>Date Approved</th>
                         <th>Status</th>
-                        <th class="action-column">Action</th>
-                    </tr>
+                        <th class="action-column">Actions</th>
+                </tr>
                 </thead>
-                <tr>
-                        <td colspan="7">No data available</td>
-                        </tr>
-                </table>
-</div>
-         </div>
+                <tbody>
+           @forelse($bansapproved as $data)
+            <tr>
+                <td>{{ $data->adviser_name }}</td>
+                <td>{{ $data->organization_name }}</td>
+                <td>{{ $data->date_establish }}</td>
+                <td>Active</td>
+                <td class="action-column">
+                                    <a href="{{ url('bansud_view-org', $data->id ) }}"
+                                        class="btn btn-success">
+                                        <i class="fa fa-info-circle"></i>
+                                    </a>
+                                </td>
+                <!-- Add more table cells for other fields as needed -->
+            </tr>
+        @empty
+            <tr>
+                <td colspan="5">No data available</td>
+            </tr>
+        @endforelse
+    </tbody> 
+                
+          </table>
+
+       
+        </div>
     </div>
+</div>
     <script src="admin/dist/js/app.js"></script>
+  
 </body>
 </html>

@@ -3,7 +3,7 @@
 @else
 <div class="page-section" id="programs">
     <div class="container">
-      <h1 class="text-center mb-5 wow fadeInUp text-uppercase" style="font-size: 50px; font-family:sans-serif;">Upcoming Events</h1>
+      <h1 class="text-center mb-5 wow fadeInUp text-uppercase" style="font-size: 50px; font-family:'Segoe UI Black';">Upcoming Events</h1>
 
       <div class="owl-carousel wow fadeInUp" id="doctorSlideshow">
         @foreach($data as $event)

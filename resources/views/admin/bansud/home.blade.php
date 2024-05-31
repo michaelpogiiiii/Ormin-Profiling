@@ -4,7 +4,7 @@
     <!-- BEGIN: Head -->
     <head>
         <meta charset="utf-8">
-        <link href="admin/dist/images/logo.svg" rel="shortcut icon">
+        <link href="user/images/goyddbgfinalogo.png" rel="shortcut icon">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="description" content="Tinker admin is super flexible, powerful, clean & modern responsive tailwind admin template with unlimited possibilities.">
         <meta name="keywords" content="admin template, Tinker Admin Template, dashboard template, flat admin template, responsive admin template, web app">
@@ -38,7 +38,6 @@
                 flex-wrap: wrap; /* Added flex-wrap property to wrap items in multiple rows */
                 }
 
-            
             .dashboard > div {
                 border-radius: 10px;
                 box-sizing: border-box;
@@ -62,22 +61,32 @@
                 font-size: 24px;
                 color: #555;
                 margin-bottom: 10px;
+                margin-left: 21px;
                 }
 
                 .dashboard div a {
                 display: inline-block;
                 margin-top: 10px;
                 padding: 8px 16px;
-                background-color: #4CAF50;
-                color: #fff;
+                background-color: ;
+                color: black;
                 text-decoration: none;
-                border-radius: 4px;
-                transition: background-color 0.3s ease;
+                border-radius: 25px;
+                transition: 0.3s ease;
                 }
 
                 .dashboard div a:hover {
                 background-color: #45a049;
                 }
+
+                .btn{
+                 background-color: #efefef;
+                border: none;
+                border-radius: 25px;
+                color: #424242;
+                box-shadow: -6px -6px 10px #f9f9f9,
+                6px 6px 10px #00000026;
+        }
 
         </style>
     </head>
@@ -100,6 +109,7 @@
                             <li class="breadcrumb-item active" aria-current="page">Dashboard</li>
                         </ol>
                     </nav>
+                    <x-app-layout></x-app-layout>
                     <!-- END: Breadcrumb -->
                 </div>
                 <!-- END: Top Bar -->
@@ -107,7 +117,7 @@
                     <div class="up-event">
                         <div style="display: flex; justify-content:space-between; width:95%; margin:auto;height:70px;">
                             <p class="text-muted">Event <br><span>(Upcoming)</span></p>
-                            <p style="background-color: rgb(171, 255, 222);border-radius:20px;"><i class="fa fa-calendar p-3" style="font-size:30px;width:100px;color:rgb(10, 159, 5);"></i></p>
+                            <p style="border-radius:10px;position:absolute;top:0;right:0;"><i class="fa fa-calendar p-3" style="font-size:30px;width:100px;color:rgb(10, 159, 5);"></i></p>
                         </div>
                         <p class="p-4" style="font-family: 'Abel', sans-serif;font-size:35px;"> {{$event_inc}} </p>
                         <a href="/bansud-incoming-event" class="btn btn-success">View</a>
@@ -116,16 +126,25 @@
                     <div class="pst-event">
                         <div style="display: flex; justify-content:space-between; width:95%; margin:auto;height:70px;">
                             <p class="text-muted">Event <br> <span>(Past)</span></p>
-                            <p style="background-color: rgb(171, 255, 222);border-radius:20px;"><i class="fa fa-calendar-times-o p-3" style="font-size:30px;width:100px;color:rgb(10, 159, 5);"></i></p>
+                            <p style="border-radius:10px;position:absolute;top:0;right:0;"><i class="fa fa-calendar-times-o p-3" style="font-size:30px;width:100px;color:rgb(10, 159, 5);"></i></p>
                         </div>
                         <p class="p-4" style="font-family: 'Abel', sans-serif;font-size:35px;"> {{$event_pst}} </p>
                         <a href="/bansud-past-event" class="btn btn-success">View</a>
                     </div>
-
+                    <!--Tds -->
+                    <div class="crrt-event">
+                        <div style="display: flex; justify-content:space-between; width:95%; margin:auto;height:70px;">
+                            <p class="text-muted">Event <br> <span>(Current)</span></p>
+                            <p style=""><i class="fa fa-calendar-times-o p-3" style="font-size:30px;width:100px;color:rgb(10, 159, 5);"></i></p>
+                        </div>
+                        <p class="p-4" style="font-family: 'Abel', sans-serif;font-size:35px;"> {{$event_pst}} </p>
+                        <a href="/bansud-todays-event" class="btn btn-success">View</a>
+                    </div>
+ <!--Tds end -->
                     <div class="act-profile">
                         <div style="display: flex; justify-content:space-between; width:95%; margin:auto;height:70px;">
                             <p class="text-muted">Profile <br><span>(Active)</span></p>
-                            <p style="background-color: rgb(171, 255, 222);border-radius:20px;"><i class="fa fa-user p-3" style="font-size:30px;width:100px;color:rgb(10, 159, 5);"></i></p>
+                            <p style="border-radius:10px;position:absolute;top:0;right:0;"><i class="fa fa-user p-3" style="font-size:30px;width:100px;color:rgb(10, 159, 5);"></i></p>
                         </div>
                         <p class="p-4" style="font-family: 'Abel', sans-serif;font-size:35px;"> {{$active_profile}} </p>
                         <a href="/bansudprofile" class="btn btn-success">View</a>
@@ -134,7 +153,7 @@
                     <div class="inc-profile">
                         <div style="display: flex; justify-content:space-between; width:95%; margin:auto;height:70px;">
                             <p class="text-muted">Profile <br><span>(Inactive)</span></p>
-                            <p style="background-color: rgb(171, 255, 222);border-radius:20px;"><i class="fa fa-user-times p-3" style="font-size:30px;width:100px;color:rgb(10, 159, 5);"></i></p>
+                            <p style="border-radius:10px;position:absolute;top:0;right:0;"><i class="fa fa-user-times p-3" style="font-size:30px;width:100px;color:rgb(10, 159, 5);"></i></p>
                         </div>
                         <p class="p-4" style="font-family: 'Abel', sans-serif;font-size:35px;"> {{$inc_profile}} </p>
                         <a href="/bansud-inactive" class="btn btn-success">View</a>
@@ -143,7 +162,7 @@
                     <div class="acc-report">
                         <div style="display: flex; justify-content:space-between; width:95%; margin:auto;height:70px;">
                             <p class="text-muted">Accomplishment <br><span>(Report)</span></p>
-                            <p style="background-color: rgb(171, 255, 222);border-radius:20px;"><i class="fa fa-file-text-o p-3" style="font-size:30px;width:100px;color:rgb(10, 159, 5);"></i></p>
+                            <p style="border-radius:10px; "><i class="fa fa-file -o p-3" style="font-size:30px;width:100px;color:rgb(10, 159, 5);"></i></p>
                         </div>
                         <p class="p-4" style="font-family: 'Abel', sans-serif;font-size:35px;"> {{$acc}} </p>
                         <a href="/bansud-accomplishment-report" class="btn btn-success">View</a>
@@ -152,7 +171,7 @@
                     <div class="mon-report">
                         <div style="display: flex; justify-content:space-between; width:95%; margin:auto;height:70px;">
                             <p class="text-muted">Monitoring <br><span>(Report)</span></p>
-                            <p style="background-color: rgb(171, 255, 222);border-radius:20px;"><i class="fa fa-file-text-o p-3" style="font-size:30px;width:100px;color:rgb(10, 159, 5);"></i></p>
+                            <p style="border-radius:10px; "><i class="fa fa-file-text-o p-3" style="font-size:30px;width:100px;color:rgb(10, 159, 5);"></i></p>
                         </div>
                         <p class="p-4" style="font-family: 'Abel', sans-serif;font-size:35px;"> {{$mon}} </p>
                         <a href="/bansud-monitoring-report" class="btn btn-success">View</a>

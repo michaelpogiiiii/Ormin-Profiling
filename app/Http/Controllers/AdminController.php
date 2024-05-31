@@ -71,13 +71,68 @@ use App\Models\RoxasMonReport;
 use App\Models\SocorroMonReport;
 use App\Models\TeodoroMonReport;
 use App\Models\VictoriaMonReport;
-
+use App\Models\AddOrganization;
 
 
 
 class AdminController extends Controller
 {
+  
+
     // Show All profiles
+    public function create(Request $request)
+    {
+        
+         return view('pydc.add-org');
+    }
+    public function store(Request $request)
+    {
+
+
+        $data = new AddOrganization( );  
+        $data->id;
+        $data->urn = $request->urn;
+        $data->organization_name = $request->organization_name;
+        $data->complete_address = $request->complete_address;
+        $data->telephone_number = $request->telephone_number;
+        $data->cellphone_number = $request->cellphone_number;
+        $data->number_members = $request->number_members;
+        $data->date_establish = $request->date_establish;
+        $data->date_approved = $request->date_approved;
+        $data->major_classification = $request->major_classification;
+        $data->sub_classification = $request->sub_classification;
+        $data->pydp_center = $request->pydp_center;
+        $data->email_add = $request->email_add;
+        $data->brief_description = $request->brief_description;
+        $data->head_name = $request->head_name;
+        $data->adviser_name = $request->adviser_name;
+        $data->contact_number = $request->contact_number;
+        $data->email_address = $request->email_address;
+        $data->registration_file = $request->registration_file;
+        $data->list_of_members_file = $request->list_of_members_file;
+        $data->directory_file = $request->directory_file;
+        $data->constitution_file = $request->constitution_file;
+        $data->save();
+       
+       return redirect()->back()->with('message', 'Profile Successfully Saved!');
+       
+    }
+    function Approved(Request $request)
+    {
+        $approved = AddOrganization::all();
+
+         return view('pydc.approved', compact('approved'));
+
+    }
+
+    public function viewOrg(Request $request, $id)
+    {
+        $approved = AddOrganization::all();
+        $approved = AddOrganization::where('id', $id)->get();
+         return view('pydc.view-org', compact('approved'));
+    }
+   
+
     public function Waitlist(Request $request)
     {
         $currentDate = Carbon::now('Asia/Manila')->toDateString();
@@ -90,12 +145,7 @@ class AdminController extends Controller
         $allProfiles = new Collection();
          return view('pydc.disapproved');
     }
-    public function Approved(Request $request)
-    {
-        $currentDate = Carbon::now('Asia/Manila')->toDateString();
-        $allProfiles = new Collection();
-         return view('pydc.approved');
-    }
+  
     public function Expired(Request $request)
     {
         $currentDate = Carbon::now('Asia/Manila')->toDateString();
@@ -674,6 +724,7 @@ class AdminController extends Controller
             RoxasAccReport::class,
             TeodoroAccReport::class,
             VictoriaAccReport::class
+           
         ];
 
         foreach ($reports as $report) {

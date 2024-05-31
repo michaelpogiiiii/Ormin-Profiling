@@ -24,8 +24,6 @@
 
     {{-- Font Awesome --}}
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
-
-
     <!-- JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/js/font-awesome.min.js"></script>
 
@@ -69,7 +67,7 @@
 
         <nav class="navbar navbar-expand-lg navbar-light shadow-sm">
             <div class="container">
-                <a class="navbar-brand" href="#"><span class="text-primary">PY</span>DC</a>
+                <a class="navbar-brand" href="#"><span class="text-primary">WELCOME</a>
 
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupport"
                     aria-controls="navbarSupport" aria-expanded="false" aria-label="Toggle navigation">
@@ -77,7 +75,7 @@
                 </button>
 
                 <div class="collapse navbar-collapse" id="navbarSupport">
-                    <ul class="navbar-nav ml-auto" id="navList">
+                    <ul class="navbar-nav ml-auto">
                         <li class="nav-item">
                             <a class="nav-link" href="/home">Home</a>
                         </li>
@@ -105,30 +103,26 @@
             </div> <!-- .container -->
         </nav>
     </header>
-
-    <div class="page-hero bg-image overlay-dark" style="background-image: url(../dash/assets/img/pydcbg.png);">
-        <div class="hero-section">
-            <div class="container text-center wow zoomIn">
-                <span class="display-4">PROVINCIAL YOUTH</span>
-                <h1 class="subhead">DEVELOPMENT COUNCIL</h1>
-            </div>
-        </div>
+    
+    <div class="page-hero bg-image overlay-dark" style="background-image: url(../dash/assets/img/goydd4.png);">
+    <x-app-layout></x-app-layout>
     </div>
 
 
     <div class="bg-light">
-        <div class="page-section py-3 mt-md-n5 custom-index">
-            <div class="container">
+        <div class="page-section py-5 mt-md-n5 custom-index" style="background-color: #000a00" >
+            <div class="container" >
                 <div class="row justify-content-center">
-                    <div class="col-md-4 py-3 py-md-0">
+                    <div class="col-md-3 py-2 py-md-0">
                         <div class="card-service wow fadeInUp">
-                            <div class="circle-shape bg-success text-white">
+                            <div class="circle-shape bg-secondary text-white">
                                 <span class="mai-chatbubbles-outline"></span>
                             </div>
                             <p>Discover Announcement</p>
                         </div>
                     </div>
-                    <div class="col-md-4 py-3 py-md-0">
+                    <a href="{{ url('view-baco-event/{id}') }}">
+                    <div class="col-md-3 py-2 py-md-0">
                         <div class="card-service wow fadeInUp">
                             <div class="circle-shape bg-primary text-white">
                                 <span class="mai-shield-checkmark"></span>
@@ -136,7 +130,9 @@
                             <p>View Events</p>
                         </div>
                     </div>
-                    <div class="col-md-4 py-3 py-md-0">
+                </a>
+                    <a href="{{ url('BacoProfiling') }}" >
+                    <div class="col-md-3 py-2 py-md-0">
                         <div class="card-service wow fadeInUp">
                             <div class="circle-shape bg-accent text-white">
                                 <span class="mai-basket"></span>
@@ -144,6 +140,11 @@
                             <p>Register for Youth Profiling</p>
                         </div>
                     </div>
+                  </a>
+                    </div>
+                </div>
+            </div>
+         
                 </div>
             </div>
         </div> <!-- .page-section -->
@@ -151,11 +152,10 @@
         <div class="page-section pb-0" id="about">
             <div class="container">
                 <div class="row align-items-center">
-                    <div class="col-lg-6 py-3 wow fadeInUp">
-                        <p class="text-grey mb-4 text-justify" style="line-height: 35px">
+                    <div class="col-lg-6 py-3 wow fadeInUp border-2">
+                        <p class="text-grey mb-4 text-justify">
                             <span style="font-size:20px; font-weight:bold;">Provincial Youth Development Council of
-                                Oriental Mindoro</span> is a dynamic organization dedicated to empowering and
-                            uplifting
+                                Oriental Mindoro</span> is a dynamic organization dedicated to empowering and uplifting
                             the youth within the province. As a government-led council, its primary mission is to
                             formulate and implement policies, programs, and projects that address the needs and
                             aspirations of young individuals. The council serves as a platform for collaboration and
@@ -167,9 +167,9 @@
                             future for themselves and their communities.
                         </p>
                     </div>
-                    <div class="col-lg-6 wow fadeInRight" data-wow-delay="400ms">
-                        <div class="img-place custom-img-1 rounded-circle">
-                            <img src="pydc.png" alt="">
+                    <div class="col-lg-0 wow fadeInRight" data-wow-delay="400ms">
+                        <div class="img-place custom-img-1" style="margin-left: -40px">
+                            <img src="youth3.png" alt="">
                         </div>
                     </div>
                 </div>
@@ -212,26 +212,7 @@
     <script src="../dash/assets/vendor/wow/wow.min.js"></script>
 
     <script src="../dash/assets/js/theme.js"></script>
-    <script>
-        //Navigation
-        const navItems = document.querySelectorAll('.nav-item');
-        for (var i = 0; i < navItems.length; i++) {
-            (function(index) {
-                navItems[index].addEventListener('mouseover', function() {
-                    navItems[index].setAttribute('class', 'nav-item active animate__animated animate__fadeIn');
-                });
 
-                navItems[index].addEventListener('mouseout', function() {
-                    navItems[index].setAttribute('class', 'nav-item');
-                });
-            })(i);
-
-
-        }
-    </script>
-
-    {{-- animate.css --}}
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
 </body>
 
 </html>

@@ -118,16 +118,16 @@
                 style="background-image: url(/eventimage/{{ $data->photo }});">
             </div>
             <div class="page-hero bg-image overlay-light col-sm-6 text-center wow fadeInRight p-2"
-                style="background-color: green; border: solid white">
-                <h1 style="font-family: cursive, sans-serif;;font-weight:800; font-size:50px"> {{ $data->name }} </h1>
-                <p class="mt-3" style="font-family: 'Alegreya Sans SC', sans-serif; font-size:25px;">
-                    {{ $data->about }} </p>
-                <p class="mt-1" style="font-family: 'Alegreya Sans SC', sans-serif; font-size:25px;">Location:
+                style="background-color: #e6f0e6; border: solid white">
+                <h1 style="color: #003200; font-family: 'Bubblegum Sans', sans-serif;;font-weight:800; font-size:50px; margin-top:50px;  "> {{ $data->name }} </h1>
+                <p class="mt-3" style="color: #003200; font-family: sans-serif; font-size:20px; margin-top:10px; margin-bottom:30px; ">
+                   <em> {{ $data->about }} </em></p>
+                <p class="mt-1" style="color: #003200; font-family: sans-serif; font-size:30px; ">Location:
                     {{ $data->location }} </p>
-                <p class="mt-1" style="font-family: 'Alegreya Sans SC', sans-serif; font-size: 25px;">
+                <p class="mt-1" style="color: #003200; font-family: sans-serif; font-size: 30px;">
                     Date: {{ date('F d, Y', strtotime($data->date)) }}
                 </p>
-                <h4 style="font-family: 'Bubblegum Sans', cursive; font-size:60px;" class="mt-4">See You There!</h4>
+                <h4 style="color: #003200; font-family: 'Monotype Corsiva'; font-size:60px; font-weight: bolder;" class="mt-4">See You There!</h4>
             </div>
         </div>
     @endforeach

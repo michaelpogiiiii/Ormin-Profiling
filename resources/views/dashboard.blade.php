@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link href="admin/dist/images/logo.svg" rel="shortcut icon">
+    <link href="user/images/goyddbgfinalogo.png" rel="shortcut icon">
     <!-- SEO Meta Tags -->
     <meta name="description" content="Your description">
     <meta name="author" content="Your name">
@@ -274,7 +274,7 @@
             <div class="row">
                 <div class="col-lg-6">
                     <div class="text-container">
-                        <h1 class="h1-large"> GO-YDD <span id="js-rotating">innovative, inspiring, engaged</span></h1>
+                        <h1 class="h1-large"> GO-YDD <span id="js-rotating">innovate, inspire, engage</span></h1>
                         <p class="p-large text-justify">
                             The Office of the Governor - Youth Development Division (GO-YDD) is a local government-led
                             initiative aimed at promoting the overall development of young people in a specific province
@@ -304,7 +304,7 @@
     <!-- For Slideshow -->
     <div class="slideshow-container">
     <div class="slide">
-      <img src="img_1.webp" alt="Slide 1">
+      <img src="c1.jpg" alt="Slide 1">
       <div class="indicator-container">
         <span class="indicator" onclick="currentSlide(1)"></span>
         <span class="indicator" onclick="currentSlide(2)"></span>
@@ -312,7 +312,7 @@
       </div>
     </div>
     <div class="slide">
-      <img src="img_2.webp" alt="Slide 2">
+      <img src="c2.png" alt="Slide 2">
       <div class="indicator-container">
         <span class="indicator" onclick="currentSlide(4)"></span>
         <span class="indicator" onclick="currentSlide(5)"></span>
@@ -320,7 +320,7 @@
       </div>
     </div>
     <div class="slide">
-      <img src="img_3.webp" alt="Slide 3">
+      <img src="c3.jpg" alt="Slide 3">
       <div class="indicator-container">
         <span class="indicator" onclick="currentSlide(7)"></span>
         <span class="indicator" onclick="currentSlide(8)"></span>
@@ -328,23 +328,6 @@
       </div>
     </div>
     <!-- Add more slides as needed -->
-    <div class="slide">
-      <img src="img_1.webp" alt="Slide 4">
-      <div class="indicator-container">
-        <span class="indicator" onclick="currentSlide(10)"></span>
-        <span class="indicator" onclick="currentSlide(11)"></span>
-        <span class="indicator" onclick="currentSlide(12)"></span>
-      </div>
-    </div>
-    <div class="slide">
-      <img src="img_2.webp" alt="Slide 5">
-      <div class="indicator-container">
-        <span class="indicator" onclick="currentSlide(13)"></span>
-        <span class="indicator" onclick="currentSlide(14)"></span>
-        <span class="indicator" onclick="currentSlide(15)"></span>
-      </div>
-    </div>
-
 
 
     {{-- About --}}
